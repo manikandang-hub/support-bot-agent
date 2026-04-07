@@ -104,21 +104,6 @@ export default function ChatInterface({ plugins, selectedPlugin, onPluginChange,
           </div>
         </div>
         <div className="topbar-controls">
-          <label htmlFor="plugin-select" className="sr-only" style={{ position: 'absolute', left: '-9999px' }}>
-            Select plugin
-          </label>
-          <select
-            id="plugin-select"
-            className="topbar-select"
-            value={selectedPlugin}
-            onChange={(e) => onPluginChange(e.target.value)}
-            aria-label="Select plugin"
-          >
-            <option value="">Choose plugin…</option>
-            {plugins.map(p => (
-              <option key={p.id} value={p.id}>{p.name}</option>
-            ))}
-          </select>
           {onClose && (
             <button
               className="topbar-close-btn"
@@ -135,18 +120,36 @@ export default function ChatInterface({ plugins, selectedPlugin, onPluginChange,
         </div>
       </header>
 
-      {/* Email bar */}
-      <div className="email-bar" role="complementary" aria-label="Contact information">
-        <span className="email-bar-label" id="email-label">Your email</span>
-        <input
-          type="email"
-          className="email-bar-input"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="you@example.com"
-          aria-labelledby="email-label"
-          autoComplete="email"
-        />
+      {/* Info bar: plugin + email */}
+      <div className="info-bar" role="complementary" aria-label="Plugin and contact information">
+        <div className="info-bar-row">
+          <label htmlFor="plugin-select" className="info-bar-label">Plugin</label>
+          <select
+            id="plugin-select"
+            className="info-bar-select"
+            value={selectedPlugin}
+            onChange={(e) => onPluginChange(e.target.value)}
+            aria-label="Select plugin"
+          >
+            <option value="">Choose plugin…</option>
+            {plugins.map(p => (
+              <option key={p.id} value={p.id}>{p.name}</option>
+            ))}
+          </select>
+        </div>
+        <div className="info-bar-divider" aria-hidden="true" />
+        <div className="info-bar-row">
+          <label htmlFor="email-input" className="info-bar-label">Email</label>
+          <input
+            id="email-input"
+            type="email"
+            className="info-bar-input"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="you@example.com"
+            autoComplete="email"
+          />
+        </div>
       </div>
 
       {/* Messages */}
