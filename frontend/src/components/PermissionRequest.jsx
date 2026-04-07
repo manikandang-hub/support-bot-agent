@@ -78,7 +78,10 @@ export default function PermissionRequest({ reason, conversationId, pluginId, em
                 </>
               ) : (
                 <>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  {/* Zendesk Z logo */}
+                  <svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.786 12.03v11.654H4L14.786 12.03zM16.113 8c0-3.314 2.733-6 6.108-6C25.596 2 28.33 4.686 28.33 8s-2.734 6-6.109 6c-3.375 0-6.108-2.686-6.108-6zM16.215 24c0 3.314 2.733 6 6.108 6 3.375 0 6.109-2.686 6.109-6s-2.734-6-6.109-6c-3.375 0-6.108 2.686-6.108 6zM15.214 8c0-3.314-2.733-6-6.108-6C5.731 2 2.997 4.686 2.997 8s2.734 6 6.109 6c3.375 0 6.108-2.686 6.108-6zM17.329 12.03L28.115 23.684H17.329V12.03z"/>
+                  </svg>
                   Yes, create a ticket
                 </>
               )}

@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { sendQuery } from '../services/api';
 import ChatMessage from './ChatMessage';
+import wtLogo from '../assets/wt-logo-icon.svg';
 
 const SUGGESTIONS = [
   'How do I filter products from the feed?',
@@ -99,10 +100,12 @@ export default function ChatInterface({ plugins, selectedPlugin, onPluginChange 
       {/* Top bar */}
       <header className="chat-topbar" role="banner">
         <div className="chat-brand">
-          <div className="chat-brand-icon" aria-hidden="true">🤖</div>
+          <div className="chat-brand-icon" aria-hidden="true">
+            <img src={wtLogo} alt="" width="36" height="15" style={{ display: 'block' }} />
+          </div>
           <div>
             <div className="chat-brand-name">SupportBot</div>
-            <div className="chat-brand-tagline">Powered by AI</div>
+            <div className="chat-brand-tagline">Powered by WebToffee</div>
           </div>
         </div>
         <div className="topbar-controls">
@@ -181,7 +184,9 @@ export default function ChatInterface({ plugins, selectedPlugin, onPluginChange 
         {/* Thinking indicator */}
         {loading && (
           <div className="thinking-row" role="status" aria-label="SupportBot is thinking">
-            <div className="avatar avatar-bot" aria-hidden="true">🤖</div>
+            <div className="avatar avatar-bot" aria-hidden="true">
+              <img src={wtLogo} alt="" width="28" height="12" style={{ display: 'block' }} />
+            </div>
             <div className="thinking-dots" aria-hidden="true">
               <span /><span /><span />
             </div>

@@ -2,6 +2,7 @@ import CodeSnippet from './CodeSnippet';
 import TicketEscalation from './TicketEscalation';
 import PermissionRequest from './PermissionRequest';
 import ErrorBoundary from './ErrorBoundary';
+import wtLogo from '../assets/wt-logo-icon.svg';
 
 function formatTime(ts) {
   if (!ts) return '';
@@ -30,7 +31,9 @@ export default function ChatMessage({ message, isUser, email }) {
 
   return (
     <div className="message-row bot-row" role="listitem" aria-label="SupportBot response">
-      <div className="avatar avatar-bot" aria-hidden="true">🤖</div>
+      <div className="avatar avatar-bot" aria-hidden="true">
+        <img src={wtLogo} alt="" width="28" height="12" style={{ display: 'block' }} />
+      </div>
       <div className="message-bubble">
         <div className="bubble-content">
           <p role="text">{message.explanation}</p>
