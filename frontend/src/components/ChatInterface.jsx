@@ -50,6 +50,8 @@ export default function ChatInterface({ plugins, selectedPlugin, onPluginChange 
       const botMessage = {
         ...response.data,
         isUser: false,
+        plugin_id: selectedPlugin,
+        email: email,
       };
 
       // Store conversation_id from response for subsequent queries

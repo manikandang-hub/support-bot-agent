@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import json
 from pathlib import Path
 
-from app.models import ChatRequest, ChatResponse
+from app.models import ChatRequest, ChatResponse, ConfirmTicketRequest, PrepareTicketRequest, PrepareTicketResponse
 from app.agent import SupportAgent, PLUGIN_METADATA
 from app.config import settings
 
@@ -31,6 +31,7 @@ support_agent = SupportAgent(
     zendesk_url=settings.zendesk_url,
     zendesk_email=settings.zendesk_email,
     zendesk_api_token=settings.zendesk_api_token,
+    zendesk_agent_email=settings.zendesk_agent_email,
     llm_provider=settings.llm_provider,
 )
 
@@ -66,6 +67,36 @@ def chat(request: ChatRequest):
             conversation_id=request.conversation_id,  # Support multi-turn conversations
         )
 
+        return ChatResponse(**result)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/prepare-ticket", response_model=PrepareTicketResponse)
+def prepare_ticket(request: PrepareTicketRequest):
+    """Generate suggested ticket title and description from conversation context."""
+    try:
+        result = support_agent.prepare_ticket(
+            conversation_id=request.conversation_id,
+            customer_email=request.email,
+            plugin_id=request.plugin_id,
+        )
+        return PrepareTicketResponse(**result)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/confirm-ticket", response_model=ChatResponse)
+def confirm_ticket(request: ConfirmTicketRequest):
+    """Create a Zendesk ticket after user has given permission."""
+    try:
+        result = support_agent.confirm_ticket_creation(
+            conversation_id=request.conversation_id,
+            customer_email=request.email,
+            plugin_id=request.plugin_id,
+            title=request.title,
+            description=request.description,
+        )
         return ChatResponse(**result)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

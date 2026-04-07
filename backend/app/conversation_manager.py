@@ -15,6 +15,8 @@ class ConversationManager:
     def __init__(self):
         # Store conversations: {conversation_id: [messages]}
         self.conversations: Dict[str, List[ConversationMessage]] = {}
+        # Store pending escalation payloads: {conversation_id: dict}
+        self.pending_escalations: Dict[str, dict] = {}
 
     def create_conversation(self) -> str:
         """Create a new conversation and return its ID."""
@@ -87,10 +89,19 @@ class ConversationManager:
                 return msg.code
         return None
 
+    def store_pending_escalation(self, conversation_id: str, payload: dict) -> None:
+        """Store escalation context waiting for user confirmation."""
+        self.pending_escalations[conversation_id] = payload
+
+    def get_pending_escalation(self, conversation_id: str) -> Optional[dict]:
+        """Retrieve and remove pending escalation context."""
+        return self.pending_escalations.pop(conversation_id, None)
+
     def clear_conversation(self, conversation_id: str) -> None:
         """Clear a conversation (when starting fresh)."""
         if conversation_id in self.conversations:
             del self.conversations[conversation_id]
+        self.pending_escalations.pop(conversation_id, None)
 
 
 # Global conversation manager instance

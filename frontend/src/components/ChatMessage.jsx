@@ -1,5 +1,6 @@
 import CodeSnippet from './CodeSnippet';
 import TicketEscalation from './TicketEscalation';
+import PermissionRequest from './PermissionRequest';
 import ErrorBoundary from './ErrorBoundary';
 
 export default function ChatMessage({ message, isUser }) {
@@ -29,6 +30,17 @@ export default function ChatMessage({ message, isUser }) {
             <TicketEscalation
               ticketId={message.ticket_id}
               ticketUrl={message.ticket_url}
+            />
+          </ErrorBoundary>
+        )}
+
+        {message.action === 'ask_permission' && (
+          <ErrorBoundary>
+            <PermissionRequest
+              reason={message.reason}
+              conversationId={message.conversation_id}
+              pluginId={message.plugin_id}
+              email={message.email}
             />
           </ErrorBoundary>
         )}

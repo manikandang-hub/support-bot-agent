@@ -203,6 +203,86 @@ Return ONLY the JSON object, no other text."""
 
         return result
 
+    def generate_ticket_summary(
+        self,
+        plugin_name: str,
+        customer_email: str,
+        conversation_history: list,
+    ) -> dict:
+        """
+        Use LLM to generate a clean ticket title and description
+        from the full conversation history.
+        """
+        if self.mock_mode or not conversation_history:
+            # Fallback: use first user message
+            first_msg = next((m.content for m in conversation_history if m.role == "user"), "Support request")
+            short = first_msg[:70] + ("..." if len(first_msg) > 70 else "")
+            return {
+                "title": f"[{plugin_name}] {short}",
+                "description": f"Customer: {customer_email}\nPlugin: {plugin_name}\n\nIssue:\n{first_msg}",
+            }
+
+        # Format conversation for the prompt
+        convo_lines = []
+        for msg in conversation_history:
+            role = "Customer" if msg.role == "user" else "SupportBot"
+            convo_lines.append(f"{role}: {msg.content}")
+            if msg.code:
+                convo_lines.append(f"[Code was provided but could not resolve the issue]")
+
+        convo_text = "\n".join(convo_lines)
+
+        prompt = f"""You are a support ticket writer. Based on the following conversation between a customer and a support bot, write a clear Zendesk support ticket.
+
+Plugin: {plugin_name}
+Customer Email: {customer_email}
+
+Conversation:
+{convo_text}
+
+Generate a JSON response with exactly these two fields:
+1. "title": A short, specific ticket title (max 80 chars). Format: [{plugin_name}] <brief description of the issue>
+2. "description": A clean, professional ticket description (no raw chat dump). Include:
+   - What the customer is trying to achieve
+   - The specific issue or requirement
+   - Any relevant context from follow-up messages
+   - What was already attempted (if anything)
+
+Write the description in plain prose, not as a chat transcript. Keep it concise and actionable for a support agent.
+
+Respond ONLY with valid JSON: {{"title": "...", "description": "..."}}"""
+
+        try:
+            if self.provider == "openai":
+                response = self.openai_client.chat.completions.create(
+                    model="gpt-4-turbo",
+                    max_tokens=600,
+                    messages=[{"role": "user", "content": prompt}],
+                )
+                response_text = response.choices[0].message.content
+            else:
+                response = self.anthropic_client.messages.create(
+                    model="claude-3-5-sonnet-20241022",
+                    max_tokens=600,
+                    messages=[{"role": "user", "content": prompt}],
+                )
+                response_text = response.content[0].text
+
+            import json
+            cleaned = response_text.strip().lstrip("```json").lstrip("```").rstrip("```").strip()
+            result = json.loads(cleaned)
+            return {
+                "title": result.get("title", f"[{plugin_name}] Support Request"),
+                "description": result.get("description", convo_text),
+            }
+        except Exception:
+            # Fallback to first user message
+            first_msg = next((m.content for m in conversation_history if m.role == "user"), "")
+            return {
+                "title": f"[{plugin_name}] {first_msg[:70]}",
+                "description": first_msg,
+            }
+
     def _generate_mock_solution(
         self,
         plugin_id: str,
