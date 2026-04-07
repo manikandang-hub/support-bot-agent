@@ -4,6 +4,7 @@ Provides semantic search over knowledge base documents.
 """
 
 import json
+import hashlib
 import chromadb
 from pathlib import Path
 from typing import List, Dict
@@ -25,60 +26,71 @@ class SemanticRAG:
         self.collections: Dict[str, any] = {}
         self._load_knowledge_bases()
 
+    def _file_hash(self, paths: List[Path]) -> str:
+        """Return a combined MD5 hash of all file contents."""
+        h = hashlib.md5()
+        for p in sorted(paths):
+            h.update(p.read_bytes())
+        return h.hexdigest()
+
     def _load_knowledge_bases(self):
-        """Load JSONL files and index them in Chroma."""
+        """Load JSONL files into Chroma, skipping re-indexing when files haven't changed."""
         for plugin_dir in self.kb_dir.iterdir():
-            if plugin_dir.is_dir() and plugin_dir.name != ".chroma_db":
-                plugin_name = plugin_dir.name
-                jsonl_files = list(plugin_dir.glob("*.jsonl"))
+            if not plugin_dir.is_dir() or plugin_dir.name == ".chroma_db":
+                continue
 
-                if jsonl_files:
-                    # Get or create collection for this plugin
-                    collection_name = f"plugin_{plugin_name}"
+            plugin_name = plugin_dir.name
+            jsonl_files = list(plugin_dir.glob("*.jsonl"))
+            if not jsonl_files:
+                continue
 
-                    try:
-                        # Delete existing collection to refresh
-                        self.chroma_client.delete_collection(name=collection_name)
-                    except:
-                        pass  # Collection doesn't exist yet
+            collection_name = f"plugin_{plugin_name}"
+            current_hash = self._file_hash(jsonl_files)
 
-                    collection = self.chroma_client.get_or_create_collection(
-                        name=collection_name,
-                        metadata={"hnsw:space": "cosine"}
-                    )
+            collection = self.chroma_client.get_or_create_collection(
+                name=collection_name,
+                metadata={"hnsw:space": "cosine"}
+            )
 
-                    # Load and index documents
-                    doc_count = 0
-                    for jsonl_file in jsonl_files:
-                        try:
-                            with open(jsonl_file, "r") as f:
-                                for line in f:
-                                    if line.strip():
-                                        doc = json.loads(line)
+            # Check stored hash in collection metadata
+            stored_hash = collection.metadata.get("kb_hash", "")
+            if stored_hash == current_hash and collection.count() > 0:
+                print(f"✓ Skipping re-index for {plugin_name} (unchanged, {collection.count()} docs)")
+                self.collections[plugin_name] = collection
+                continue
 
-                                        # Create unique ID
-                                        doc_id = doc.get("id", f"doc_{doc_count}")
+            # Files changed or first run — rebuild collection
+            print(f"  Indexing {plugin_name} (hash changed or first run)…")
+            self.chroma_client.delete_collection(name=collection_name)
+            collection = self.chroma_client.get_or_create_collection(
+                name=collection_name,
+                metadata={"hnsw:space": "cosine", "kb_hash": current_hash}
+            )
 
-                                        # Combine content for embedding
-                                        text = f"{doc.get('topic', '')} {doc.get('content', '')}"
+            doc_count = 0
+            for jsonl_file in jsonl_files:
+                try:
+                    with open(jsonl_file, "r") as f:
+                        for line in f:
+                            if line.strip():
+                                doc = json.loads(line)
+                                doc_id = doc.get("id", f"doc_{doc_count}")
+                                text = f"{doc.get('topic', '')} {doc.get('content', '')}"
+                                collection.add(
+                                    ids=[doc_id],
+                                    documents=[text],
+                                    metadatas=[{
+                                        "topic": doc.get("topic", ""),
+                                        "source": str(jsonl_file.name),
+                                        "hook_name": doc.get("hook_name", ""),
+                                    }]
+                                )
+                                doc_count += 1
+                    print(f"✓ Indexed {doc_count} docs from {plugin_name}/{jsonl_file.name}")
+                except Exception as e:
+                    print(f"✗ Error indexing {jsonl_file}: {e}")
 
-                                        # Add to collection
-                                        collection.add(
-                                            ids=[doc_id],
-                                            documents=[text],
-                                            metadatas=[{
-                                                "topic": doc.get("topic", ""),
-                                                "source": str(jsonl_file.name),
-                                                "hook_name": doc.get("hook_name", ""),
-                                            }]
-                                        )
-                                        doc_count += 1
-
-                            print(f"✓ Indexed {doc_count} documents from {plugin_name}/{jsonl_file.name}")
-                        except Exception as e:
-                            print(f"✗ Error indexing {jsonl_file}: {e}")
-
-                    self.collections[plugin_name] = collection
+            self.collections[plugin_name] = collection
 
     def search(
         self,
