@@ -635,6 +635,10 @@
   border-color: #9ca3af;
 }
 
+.input-textarea:focus {
+  outline: none;
+}
+
 .input-textarea {
   flex: 1;
   border: none;
