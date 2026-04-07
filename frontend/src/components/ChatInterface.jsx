@@ -3,11 +3,6 @@ import { sendQuery } from '../services/api';
 import ChatMessage from './ChatMessage';
 import wtLogo from '../assets/wt-logo-icon.svg';
 
-const SUGGESTIONS = [
-  'How do I filter products from the feed?',
-  'How can I customize the invoice template?',
-  'How do I exclude out-of-stock products?',
-];
 
 export default function ChatInterface({ plugins, selectedPlugin, onPluginChange }) {
   const [messages, setMessages] = useState([]);
@@ -158,22 +153,6 @@ export default function ChatInterface({ plugins, selectedPlugin, onPluginChange 
                 ? `Ask anything about ${selectedPluginName}`
                 : 'Select a plugin above, then ask your question'}
             </p>
-            {selectedPlugin && (
-              <div className="empty-suggestions" role="list" aria-label="Suggested questions">
-                {SUGGESTIONS.map((s, i) => (
-                  <button
-                    key={i}
-                    role="listitem"
-                    className="suggestion-chip"
-                    onClick={() => submit(s)}
-                    disabled={loading || !email.trim()}
-                    aria-label={`Ask: ${s}`}
-                  >
-                    {s}
-                  </button>
-                ))}
-              </div>
-            )}
           </div>
         ) : (
           messages.map((msg, idx) => (
