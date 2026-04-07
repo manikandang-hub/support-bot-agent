@@ -327,14 +327,14 @@ Return ONLY the JSON object, no other text."""
                 "description": f"Customer ({customer_email}) needs assistance with {plugin_name}.",
             }
 
-        # Build readable conversation transcript
+        # Build readable conversation transcript from ConversationMessage objects
         transcript = ""
         for msg in conversation_history:
-            role = "Customer" if msg.get("role") == "user" else "SupportBot"
-            content = msg.get("content", "")
-            if isinstance(content, list):
-                content = " ".join(c.get("text", "") for c in content if isinstance(c, dict))
+            role = "Customer" if msg.role == "user" else "SupportBot"
+            content = msg.content or ""
             transcript += f"{role}: {content}\n\n"
+            if msg.code:
+                transcript += f"[Code snippet was provided]\n\n"
 
         prompt = f"""You are a support ticket writer. Based on the conversation below, write a concise support ticket.
 
