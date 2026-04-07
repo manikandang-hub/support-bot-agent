@@ -1,6 +1,12 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { sendQuery } from '../services/api';
 import ChatMessage from './ChatMessage';
+
+const SUGGESTIONS = [
+  'How do I filter products from the feed?',
+  'How can I customize the invoice template?',
+  'How do I exclude out-of-stock products?',
+];
 
 export default function ChatInterface({ plugins, selectedPlugin, onPluginChange }) {
   const [messages, setMessages] = useState([]);
@@ -8,16 +14,15 @@ export default function ChatInterface({ plugins, selectedPlugin, onPluginChange 
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const [conversationId, setConversationId] = useState(null); // Track conversation for follow-ups
+  const [conversationId, setConversationId] = useState(null);
   const messagesEndRef = useRef(null);
+  const textareaRef = useRef(null);
+  const liveRegionRef = useRef(null);
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
+  // Auto-scroll to bottom on new messages
   useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages, loading]);
 
   // Reset conversation when plugin changes
   useEffect(() => {
@@ -25,113 +30,205 @@ export default function ChatInterface({ plugins, selectedPlugin, onPluginChange 
     setMessages([]);
   }, [selectedPlugin]);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // Auto-resize textarea
+  useEffect(() => {
+    const el = textareaRef.current;
+    if (!el) return;
+    el.style.height = 'auto';
+    el.style.height = Math.min(el.scrollHeight, 120) + 'px';
+  }, [input]);
 
-    if (!input.trim() || !email.trim() || !selectedPlugin) {
-      setError('Please fill in all fields and select a plugin');
+  const announce = (text) => {
+    if (liveRegionRef.current) liveRegionRef.current.textContent = text;
+  };
+
+  const submit = useCallback(async (query) => {
+    if (!query.trim() || !email.trim() || !selectedPlugin) {
+      setError('Please fill in your email and select a plugin before sending.');
       return;
     }
 
     setError('');
     setLoading(true);
-
-    // Add user message to chat
-    const userMessage = {
-      text: input,
-      isUser: true,
-    };
-    setMessages(prev => [...prev, userMessage]);
+    setMessages(prev => [...prev, { text: query, isUser: true }]);
     setInput('');
 
     try {
-      // Pass conversation_id for follow-up questions
-      const response = await sendQuery(selectedPlugin, input, email, conversationId);
+      const response = await sendQuery(selectedPlugin, query, email, conversationId);
       const botMessage = {
         ...response.data,
         isUser: false,
         plugin_id: selectedPlugin,
-        email: email,
+        email,
       };
-
-      // Store conversation_id from response for subsequent queries
-      if (response.data.conversation_id) {
-        setConversationId(response.data.conversation_id);
-      }
-
+      if (response.data.conversation_id) setConversationId(response.data.conversation_id);
       setMessages(prev => [...prev, botMessage]);
+      announce('New response received from SupportBot.');
     } catch (err) {
       setError(err.message || 'Failed to get response. Please try again.');
-      setMessages(prev => prev.slice(0, -1)); // Remove user message on error
+      setMessages(prev => prev.slice(0, -1));
+      announce('Error: failed to get response.');
     } finally {
       setLoading(false);
+      textareaRef.current?.focus();
+    }
+  }, [email, selectedPlugin, conversationId]);
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      submit(input);
     }
   };
 
+  const selectedPluginName = plugins.find(p => p.id === selectedPlugin)?.name || '';
+
   return (
-    <div className="chat-interface">
-      <div className="chat-header">
-        <h1>🤖 SupportBot</h1>
-        <p>Ask questions about WordPress plugins and get instant solutions</p>
-      </div>
+    <main className="chat-shell" aria-label="SupportBot chat">
 
-      <div className="chat-container">
-        <div className="messages-area">
-          {messages.length === 0 ? (
-            <div className="empty-state">
-              <h2>Welcome to SupportBot</h2>
-              <p>Select a plugin and ask your question below</p>
-            </div>
-          ) : (
-            messages.map((msg, idx) => (
-              <ChatMessage key={idx} message={msg} isUser={msg.isUser} />
-            ))
-          )}
-          <div ref={messagesEndRef} />
+      {/* Accessible live region for screen readers */}
+      <div
+        ref={liveRegionRef}
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+        className="sr-only"
+        style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }}
+      />
+
+      {/* Top bar */}
+      <header className="chat-topbar" role="banner">
+        <div className="chat-brand">
+          <div className="chat-brand-icon" aria-hidden="true">🤖</div>
+          <div>
+            <div className="chat-brand-name">SupportBot</div>
+            <div className="chat-brand-tagline">Powered by AI</div>
+          </div>
         </div>
+        <div className="topbar-controls">
+          <label htmlFor="plugin-select" className="sr-only" style={{ position: 'absolute', left: '-9999px' }}>
+            Select plugin
+          </label>
+          <select
+            id="plugin-select"
+            className="topbar-select"
+            value={selectedPlugin}
+            onChange={(e) => onPluginChange(e.target.value)}
+            aria-label="Select plugin"
+          >
+            <option value="">Choose plugin…</option>
+            {plugins.map(p => (
+              <option key={p.id} value={p.id}>{p.name}</option>
+            ))}
+          </select>
+        </div>
+      </header>
 
-        <form onSubmit={handleSubmit} className="chat-form">
-          {error && <div className="error-message">{error}</div>}
-
-          <div className="form-group">
-            <label>Select Plugin</label>
-            <select value={selectedPlugin} onChange={(e) => onPluginChange(e.target.value)}>
-              <option value="">Choose a plugin...</option>
-              {plugins.map(plugin => (
-                <option key={plugin.id} value={plugin.id}>
-                  {plugin.name}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div className="form-group">
-            <label>Your Email</label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="your@email.com"
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            <label>Your Question</label>
-            <textarea
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask your question about the plugin..."
-              rows="4"
-              disabled={loading}
-            />
-          </div>
-
-          <button type="submit" disabled={loading || !selectedPlugin} className="submit-btn">
-            {loading ? 'Thinking...' : 'Send Question'}
-          </button>
-        </form>
+      {/* Email bar */}
+      <div className="email-bar" role="complementary" aria-label="Contact information">
+        <span className="email-bar-label" id="email-label">Your email</span>
+        <input
+          type="email"
+          className="email-bar-input"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="you@example.com"
+          aria-labelledby="email-label"
+          autoComplete="email"
+        />
       </div>
-    </div>
+
+      {/* Messages */}
+      <div
+        className="messages-area"
+        role="log"
+        aria-label="Chat messages"
+        aria-live="polite"
+        aria-relevant="additions"
+      >
+        {messages.length === 0 ? (
+          <div className="empty-state" aria-label="Welcome screen">
+            <div className="empty-state-icon" aria-hidden="true">💬</div>
+            <h2>How can I help you?</h2>
+            <p>
+              {selectedPlugin
+                ? `Ask anything about ${selectedPluginName}`
+                : 'Select a plugin above, then ask your question'}
+            </p>
+            {selectedPlugin && (
+              <div className="empty-suggestions" role="list" aria-label="Suggested questions">
+                {SUGGESTIONS.map((s, i) => (
+                  <button
+                    key={i}
+                    role="listitem"
+                    className="suggestion-chip"
+                    onClick={() => submit(s)}
+                    disabled={loading || !email.trim()}
+                    aria-label={`Ask: ${s}`}
+                  >
+                    {s}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        ) : (
+          messages.map((msg, idx) => (
+            <ChatMessage key={idx} message={msg} isUser={msg.isUser} email={email} />
+          ))
+        )}
+
+        {/* Thinking indicator */}
+        {loading && (
+          <div className="thinking-row" role="status" aria-label="SupportBot is thinking">
+            <div className="avatar avatar-bot" aria-hidden="true">🤖</div>
+            <div className="thinking-dots" aria-hidden="true">
+              <span /><span /><span />
+            </div>
+          </div>
+        )}
+
+        <div ref={messagesEndRef} aria-hidden="true" />
+      </div>
+
+      {/* Input area */}
+      <div className="input-area" role="form" aria-label="Send a message">
+        {error && (
+          <div className="input-error" role="alert" aria-live="assertive">
+            <span aria-hidden="true">⚠</span> {error}
+          </div>
+        )}
+
+        <div className="input-row">
+          <textarea
+            id="chat-input"
+            ref={textareaRef}
+            className="input-textarea"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Ask your question… (Enter to send, Shift+Enter for new line)"
+            rows={1}
+            disabled={loading}
+            aria-label="Message input"
+            aria-multiline="true"
+            aria-disabled={loading}
+          />
+          <button
+            className="send-btn"
+            onClick={() => submit(input)}
+            disabled={loading || !input.trim() || !selectedPlugin}
+            aria-label="Send message"
+            title="Send (Enter)"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </button>
+        </div>
+        <p className="input-hint" aria-hidden="true">Enter to send · Shift+Enter for new line</p>
+      </div>
+    </main>
   );
 }

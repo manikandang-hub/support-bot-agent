@@ -2,66 +2,105 @@ import { useState, useEffect } from 'react';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-php';
 
+function escapeHtml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 export default function CodeSnippet({ code, hooks }) {
   const [copied, setCopied] = useState(false);
-  const [highlightedCode, setHighlightedCode] = useState('');
-  const [error, setError] = useState(null);
+  const [highlighted, setHighlighted] = useState('');
 
   useEffect(() => {
     try {
       if (code && Prism.languages.php) {
-        const highlighted = Prism.highlight(code, Prism.languages.php, 'php');
-        setHighlightedCode(highlighted);
-        setError(null);
+        setHighlighted(Prism.highlight(code, Prism.languages.php, 'php'));
       }
-    } catch (err) {
-      console.error('Syntax highlighting error:', err);
-      setHighlightedCode(code); // Fallback to non-highlighted code
-      setError(null);
+    } catch {
+      setHighlighted('');
     }
   }, [code]);
 
-  const handleCopy = () => {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(code);
+  const handleCopy = async () => {
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(code);
+      } else {
+        const el = document.createElement('textarea');
+        el.value = code;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+      }
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
-    } else {
-      // Fallback for older browsers
-      const textArea = document.createElement('textarea');
-      textArea.value = code;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textArea);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // silent fail
     }
   };
 
-  if (!code) {
-    return <div className="code-snippet"><p>No code available</p></div>;
-  }
+  if (!code) return null;
 
   return (
-    <div className="code-snippet">
-      <div className="code-header">
-        <span className="code-label">💻 PHP Solution</span>
-        <button className="copy-btn" onClick={handleCopy}>
-          {copied ? '✓ Copied!' : 'Copy Code'}
+    <section className="code-block" aria-label="PHP code solution">
+      {/* Header bar */}
+      <div className="code-block-header">
+        <div className="code-block-lang" aria-hidden="true">
+          <span className="lang-dot" />
+          PHP
+        </div>
+        <button
+          className={`code-copy-btn${copied ? ' copied' : ''}`}
+          onClick={handleCopy}
+          aria-label={copied ? 'Copied to clipboard' : 'Copy code to clipboard'}
+          aria-pressed={copied}
+        >
+          {copied ? (
+            <>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Copied!
+            </>
+          ) : (
+            <>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+              </svg>
+              Copy
+            </>
+          )}
         </button>
       </div>
-      <pre>
-        <code
-          className="language-php"
-          dangerouslySetInnerHTML={{ __html: highlightedCode || code }}
-        />
-      </pre>
+
+      {/* Scrollable code — horizontal + vertical */}
+      <div
+        className="code-scroll-area"
+        tabIndex={0}
+        role="region"
+        aria-label="Code, scrollable"
+      >
+        <pre>
+          <code
+            className="language-php"
+            dangerouslySetInnerHTML={{ __html: highlighted || escapeHtml(code) }}
+          />
+        </pre>
+      </div>
+
+      {/* Hook tags */}
       {hooks && hooks.length > 0 && (
-        <div className="hooks-info">
-          <strong>Hooks Used:</strong> {hooks.join(', ')}
+        <div className="hooks-used" aria-label={`Hooks used: ${hooks.join(', ')}`} role="list">
+          {hooks.map(h => (
+            <span key={h} className="hook-tag" role="listitem" title={h}>{h}</span>
+          ))}
         </div>
       )}
-    </div>
+    </section>
   );
 }

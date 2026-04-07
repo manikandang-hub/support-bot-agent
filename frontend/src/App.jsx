@@ -29,11 +29,11 @@ export default function App() {
   }, []);
 
   if (loading) {
-    return <div className="loading">Loading...</div>;
+    return <div className="loading-screen" role="status" aria-live="polite">Loading SupportBot…</div>;
   }
 
   if (error) {
-    return <div className="error">{error}</div>;
+    return <div className="error-screen" role="alert">{error}</div>;
   }
 
   return (

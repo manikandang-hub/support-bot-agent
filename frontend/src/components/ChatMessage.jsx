@@ -3,47 +3,66 @@ import TicketEscalation from './TicketEscalation';
 import PermissionRequest from './PermissionRequest';
 import ErrorBoundary from './ErrorBoundary';
 
-export default function ChatMessage({ message, isUser }) {
+function formatTime(ts) {
+  if (!ts) return '';
+  try {
+    return new Date(ts).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  } catch {
+    return '';
+  }
+}
+
+export default function ChatMessage({ message, isUser, email }) {
+  const initial = email ? email[0].toUpperCase() : 'U';
+  const time = formatTime(message.timestamp);
+
   if (isUser) {
     return (
-      <div className="message user-message">
-        <div className="message-content">
-          <p>{message.text}</p>
+      <div className="message-row user-row" role="listitem" aria-label={`You: ${message.text}`}>
+        <div className="message-bubble">
+          <div className="bubble-content" role="text">{message.text}</div>
+          {time && <span className="bubble-time" aria-label={`Sent at ${time}`}>{time}</span>}
         </div>
+        <div className="avatar avatar-user" aria-hidden="true">{initial}</div>
       </div>
     );
   }
 
   return (
-    <div className="message bot-message">
-      <div className="message-content">
-        <p>{message.explanation}</p>
+    <div className="message-row bot-row" role="listitem" aria-label="SupportBot response">
+      <div className="avatar avatar-bot" aria-hidden="true">🤖</div>
+      <div className="message-bubble">
+        <div className="bubble-content">
+          <p role="text">{message.explanation}</p>
 
-        {message.action === 'snippet' && message.code && (
-          <ErrorBoundary>
-            <CodeSnippet code={message.code} hooks={message.hook_names} />
-          </ErrorBoundary>
-        )}
+          {message.action === 'snippet' && message.code && (
+            <ErrorBoundary>
+              <CodeSnippet code={message.code} hooks={message.hook_names} />
+            </ErrorBoundary>
+          )}
 
-        {message.action === 'escalate' && (
-          <ErrorBoundary>
-            <TicketEscalation
-              ticketId={message.ticket_id}
-              ticketUrl={message.ticket_url}
-            />
-          </ErrorBoundary>
-        )}
+          {message.action === 'escalate' && (
+            <ErrorBoundary>
+              <TicketEscalation
+                ticketId={message.ticket_id}
+                ticketUrl={message.ticket_url}
+                assignedAgent={message.email}
+              />
+            </ErrorBoundary>
+          )}
 
-        {message.action === 'ask_permission' && (
-          <ErrorBoundary>
-            <PermissionRequest
-              reason={message.reason}
-              conversationId={message.conversation_id}
-              pluginId={message.plugin_id}
-              email={message.email}
-            />
-          </ErrorBoundary>
-        )}
+          {message.action === 'ask_permission' && (
+            <ErrorBoundary>
+              <PermissionRequest
+                reason={message.reason}
+                conversationId={message.conversation_id}
+                pluginId={message.plugin_id}
+                email={message.email}
+              />
+            </ErrorBoundary>
+          )}
+        </div>
+        {time && <span className="bubble-time" aria-label={`Received at ${time}`}>{time}</span>}
       </div>
     </div>
   );
