@@ -1,97 +1,36 @@
-/* ── Widget launcher ────────────────────────────────── */
-.widget-trigger {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-  box-shadow: 0 4px 20px rgba(79,70,229,0.45), 0 2px 8px rgba(0,0,0,0.15);
+/* ── Layout ─────────────────────────────────────────── */
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: stretch;
+  background: #f0f2f5;
+}
+
+.loading-screen,
+.error-screen {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  border: none;
-  z-index: 9999;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  height: 100vh;
+  font-size: 15px;
+  color: #666;
 }
 
-.widget-trigger:hover {
-  transform: scale(1.08);
-  box-shadow: 0 6px 28px rgba(79,70,229,0.55), 0 3px 10px rgba(0,0,0,0.18);
-}
-
-.widget-trigger:focus-visible {
-  outline: 3px solid #7c3aed;
-  outline-offset: 3px;
-}
-
-.widget-trigger--open {
-  background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
-}
-
-.widget-trigger-logo,
-.widget-trigger-close {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  color: white;
-}
-
-.widget-trigger-logo--hidden {
-  opacity: 0;
-  transform: scale(0.7) rotate(45deg);
-  pointer-events: none;
-}
-
-.widget-trigger-logo:not(.widget-trigger-logo--hidden),
-.widget-trigger-close:not(.widget-trigger-logo--hidden) {
-  opacity: 1;
-  transform: scale(1) rotate(0deg);
-}
-
-/* ── Widget panel ───────────────────────────────────── */
-.widget-panel {
-  position: fixed;
-  bottom: 96px;
-  right: 24px;
-  width: 400px;
-  height: 620px;
-  max-height: calc(100vh - 120px);
-  max-width: calc(100vw - 32px);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 24px 64px rgba(0,0,0,0.18), 0 4px 20px rgba(0,0,0,0.1);
-  z-index: 9998;
-  opacity: 0;
-  transform: translateY(20px) scale(0.95);
-  pointer-events: none;
-  transition: opacity 0.25s ease, transform 0.25s ease;
-  transform-origin: bottom right;
-}
-
-.widget-panel--open {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  pointer-events: all;
-}
+.error-screen { color: #dc2626; }
 
 /* ── Chat shell ─────────────────────────────────────── */
 .chat-shell {
   width: 100%;
-  height: 100%;
+  max-width: 860px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   background: #fff;
-  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.06), 0 4px 24px rgba(0,0,0,0.08);
 }
-
-.loading-screen,
-.error-screen { display: none; }
 
 /* ── Header ─────────────────────────────────────────── */
 .chat-topbar {
@@ -926,9 +865,8 @@
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* ── Responsive ─────────────────────────────────────── */
-@media (max-width: 480px) {
-  .widget-panel { width: calc(100vw - 16px); right: 8px; bottom: 88px; }
-  .widget-trigger { right: 16px; bottom: 16px; }
+@media (max-width: 640px) {
+  .chat-shell { max-width: 100%; }
   .message-row.user-row { padding-left: 16px; }
 }
 
