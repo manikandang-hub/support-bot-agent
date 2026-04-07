@@ -311,6 +311,78 @@ Return ONLY the JSON object, no other text."""
 
         return result
 
+    def generate_ticket_summary(
+        self,
+        plugin_name: str,
+        customer_email: str,
+        conversation_history: list,
+    ) -> dict:
+        """
+        Use LLM to generate a clean ticket title and description from the conversation.
+        Returns {"title": str, "description": str}.
+        """
+        if not conversation_history:
+            return {
+                "title": f"Support Request – {plugin_name}",
+                "description": f"Customer ({customer_email}) needs assistance with {plugin_name}.",
+            }
+
+        # Build readable conversation transcript
+        transcript = ""
+        for msg in conversation_history:
+            role = "Customer" if msg.get("role") == "user" else "SupportBot"
+            content = msg.get("content", "")
+            if isinstance(content, list):
+                content = " ".join(c.get("text", "") for c in content if isinstance(c, dict))
+            transcript += f"{role}: {content}\n\n"
+
+        prompt = f"""You are a support ticket writer. Based on the conversation below, write a concise support ticket.
+
+Plugin: {plugin_name}
+Customer: {customer_email}
+
+Conversation:
+{transcript}
+
+Return ONLY valid JSON (no markdown) with exactly these two keys:
+{{
+  "title": "Short one-line summary of the issue (max 80 chars)",
+  "description": "Clear description of the issue the customer is facing, what was tried, and what help is needed. Use plain text, no markdown."
+}}"""
+
+        try:
+            if self.provider == "anthropic":
+                response = self.anthropic_client.messages.create(
+                    model="claude-3-5-sonnet-20241022",
+                    max_tokens=600,
+                    messages=[{"role": "user", "content": prompt}],
+                )
+                raw = response.content[0].text.strip()
+            else:
+                response = self.openai_client.chat.completions.create(
+                    model="gpt-4-turbo",
+                    max_tokens=600,
+                    messages=[{"role": "user", "content": prompt}],
+                )
+                raw = response.choices[0].message.content.strip()
+
+            # Strip markdown code fences if present
+            if raw.startswith("```"):
+                raw = raw.split("```")[1]
+                if raw.startswith("json"):
+                    raw = raw[4:]
+            result = json.loads(raw)
+            return {
+                "title": result.get("title", f"Support Request – {plugin_name}"),
+                "description": result.get("description", transcript),
+            }
+        except Exception as e:
+            print(f"✗ generate_ticket_summary error: {e}")
+            return {
+                "title": f"Support Request – {plugin_name}",
+                "description": f"Customer ({customer_email}) needs assistance with {plugin_name}.\n\n{transcript}",
+            }
+
     def _generate_mock_solution(
         self,
         plugin_id: str,
