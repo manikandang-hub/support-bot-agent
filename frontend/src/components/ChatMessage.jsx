@@ -10,29 +10,65 @@ function formatTime(ts) {
   catch { return ''; }
 }
 
+// Simple markdown renderer: **bold**, *italic*, `code`, newlines → paragraphs
+function parseInline(text, keyPrefix) {
+  const result = [];
+  const regex = /\*\*(.+?)\*\*|`([^`]+)`|\*(.+?)\*/g;
+  let last = 0;
+  let match;
+  let i = 0;
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > last) result.push(text.slice(last, match.index));
+    if (match[1] !== undefined) result.push(<strong key={`${keyPrefix}-b${i++}`}>{match[1]}</strong>);
+    else if (match[2] !== undefined) result.push(<code key={`${keyPrefix}-c${i++}`} className="inline-code">{match[2]}</code>);
+    else if (match[3] !== undefined) result.push(<em key={`${keyPrefix}-e${i++}`}>{match[3]}</em>);
+    last = match.index + match[0].length;
+  }
+  if (last < text.length) result.push(text.slice(last));
+  return result;
+}
+
+function renderMarkdown(text) {
+  if (!text) return null;
+  const paragraphs = text.split(/\n{2,}/);
+  return paragraphs.map((para, pi) => {
+    const lines = para.split('\n');
+    const content = lines.flatMap((line, li) => {
+      const parts = parseInline(line, `${pi}-${li}`);
+      return li < lines.length - 1 ? [...parts, <br key={`br-${pi}-${li}`} />] : parts;
+    });
+    return <p key={pi}>{content}</p>;
+  });
+}
+
 export default function ChatMessage({ message, isUser, email }) {
   const initial = email ? email[0].toUpperCase() : 'U';
   const time = formatTime(message.timestamp);
+  const isoTime = message.timestamp ? new Date(message.timestamp).toISOString() : undefined;
 
   if (isUser) {
     return (
-      <div className="message-row user-row" role="listitem" aria-label={`You: ${message.text}`}>
+      <li className="message-row user-row" aria-label={`You: ${message.text}`}>
         <div className="message-bubble">
-          <div className="bubble-content" role="text">{message.text}</div>
-          {time && <span className="bubble-time">{time}</span>}
+          <div className="bubble-content">{message.text}</div>
+          {time && (
+            <time className="bubble-time" dateTime={isoTime} aria-label={`Sent at ${time}`}>
+              {time}
+            </time>
+          )}
         </div>
-      </div>
+      </li>
     );
   }
 
   return (
-    <div className="message-row bot-row" role="listitem" aria-label="SupportBot response">
+    <li className="message-row bot-row" aria-label="SupportBot response">
       <div className="avatar avatar-bot" aria-hidden="true">
         <img src={wtLogo} alt="" width="26" height="11" style={{ display: 'block' }} />
       </div>
       <div className="message-bubble">
         <div className="bubble-content">
-          {message.explanation && <p role="text">{message.explanation}</p>}
+          {message.explanation && renderMarkdown(message.explanation)}
 
           {message.action === 'snippet' && message.code && (
             <ErrorBoundary>
@@ -61,8 +97,12 @@ export default function ChatMessage({ message, isUser, email }) {
             </ErrorBoundary>
           )}
         </div>
-        {time && <span className="bubble-time">{time}</span>}
+        {time && (
+          <time className="bubble-time" dateTime={isoTime} aria-label={`Received at ${time}`}>
+            {time}
+          </time>
+        )}
       </div>
-    </div>
+    </li>
   );
 }
