@@ -601,9 +601,9 @@
 
 /* ── Input area ─────────────────────────────────────── */
 .input-area {
-  padding: 10px 14px 14px;
+  padding: 12px 16px 16px;
   background: white;
-  border-top: 1px solid #ebebeb;
+  border-top: 1px solid #d1d5db;
   flex-shrink: 0;
 }
 
@@ -624,14 +624,16 @@
   display: flex;
   align-items: flex-end;
   gap: 8px;
-  background: #f4f4f4;
+  background: #fff;
+  border: 1.5px solid #d1d5db;
   border-radius: 14px;
-  padding: 10px 10px 10px 14px;
-  transition: box-shadow 0.15s;
+  padding: 10px 10px 10px 16px;
+  transition: border-color 0.15s, box-shadow 0.15s;
 }
 
 .input-row:focus-within {
-  box-shadow: 0 0 0 2px #d1d5db;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79,70,229,0.12);
 }
 
 .input-textarea {
