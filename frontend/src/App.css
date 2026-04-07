@@ -101,9 +101,9 @@
 .info-bar {
   display: flex;
   align-items: center;
-  padding: 7px 14px;
-  background: #fafafa;
-  border-bottom: 1px solid #ebebeb;
+  padding: 10px 16px;
+  background: #fff;
+  border-bottom: 1px solid #d1d5db;
   flex-shrink: 0;
   gap: 0;
 }
@@ -111,26 +111,24 @@
 .info-bar-row {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   flex: 1;
   min-width: 0;
 }
 
 .info-bar-divider {
   width: 1px;
-  height: 20px;
-  background: #e0e0e0;
-  margin: 0 10px;
+  height: 24px;
+  background: #d1d5db;
+  margin: 0 14px;
   flex-shrink: 0;
 }
 
 .info-bar-label {
-  font-size: 10.5px;
+  font-size: 11.5px;
   font-weight: 700;
-  color: #767676;
+  color: #374151;
   white-space: nowrap;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
   flex-shrink: 0;
 }
 
@@ -138,21 +136,29 @@
 .info-bar-input {
   flex: 1;
   min-width: 0;
-  padding: 4px 8px;
-  border: 1px solid #e5e7eb;
-  border-radius: 6px;
-  font-size: 12px;
-  color: #333;
-  background: white;
-  transition: border-color 0.15s;
+  padding: 7px 10px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 13.5px;
+  color: #111;
+  background: #f9fafb;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
   font-family: inherit;
+  height: 36px;
+}
+
+.info-bar-select:hover,
+.info-bar-input:hover {
+  border-color: #9ca3af;
+  background: #fff;
 }
 
 .info-bar-select:focus,
 .info-bar-input:focus {
   outline: none;
   border-color: #4f46e5;
-  box-shadow: 0 0 0 2px rgba(79,70,229,0.1);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(79,70,229,0.12);
 }
 
 /* ── Messages ───────────────────────────────────────── */
