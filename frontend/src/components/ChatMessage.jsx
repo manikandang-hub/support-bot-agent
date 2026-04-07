@@ -6,11 +6,8 @@ import wtLogo from '../assets/wt-logo-icon.svg';
 
 function formatTime(ts) {
   if (!ts) return '';
-  try {
-    return new Date(ts).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-  } catch {
-    return '';
-  }
+  try { return new Date(ts).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); }
+  catch { return ''; }
 }
 
 export default function ChatMessage({ message, isUser, email }) {
@@ -22,9 +19,8 @@ export default function ChatMessage({ message, isUser, email }) {
       <div className="message-row user-row" role="listitem" aria-label={`You: ${message.text}`}>
         <div className="message-bubble">
           <div className="bubble-content" role="text">{message.text}</div>
-          {time && <span className="bubble-time" aria-label={`Sent at ${time}`}>{time}</span>}
+          {time && <span className="bubble-time">{time}</span>}
         </div>
-        <div className="avatar avatar-user" aria-hidden="true">{initial}</div>
       </div>
     );
   }
@@ -32,11 +28,11 @@ export default function ChatMessage({ message, isUser, email }) {
   return (
     <div className="message-row bot-row" role="listitem" aria-label="SupportBot response">
       <div className="avatar avatar-bot" aria-hidden="true">
-        <img src={wtLogo} alt="" width="28" height="12" style={{ display: 'block' }} />
+        <img src={wtLogo} alt="" width="26" height="11" style={{ display: 'block' }} />
       </div>
       <div className="message-bubble">
         <div className="bubble-content">
-          <p role="text">{message.explanation}</p>
+          {message.explanation && <p role="text">{message.explanation}</p>}
 
           {message.action === 'snippet' && message.code && (
             <ErrorBoundary>
@@ -65,7 +61,7 @@ export default function ChatMessage({ message, isUser, email }) {
             </ErrorBoundary>
           )}
         </div>
-        {time && <span className="bubble-time" aria-label={`Received at ${time}`}>{time}</span>}
+        {time && <span className="bubble-time">{time}</span>}
       </div>
     </div>
   );
