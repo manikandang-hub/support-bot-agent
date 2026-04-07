@@ -1,0 +1,60 @@
+# Virtual environments (any name under backend/)
+venv/
+.venv/
+env/
+ENV/
+.virtualenv/
+
+# Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.so
+
+# Test / coverage / type / lint caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+
+# Packaging / installers
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+__pypackages__/
+
+# Build output
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Logs & local data
+*.log
+*.db
+*.sqlite
+*.sqlite3
+
+# Tooling / misc caches
+.cache/
+*.cache
+
+# Editor / OS
+.DS_Store
+Thumbs.db

@@ -78,6 +78,7 @@ backend/.pytype/
 backend/.hypothesis/
 backend/.tox/
 backend/.nox/
+backend/knowledge_base/product-feed/webtoffee-product-feed-pro
 
 frontend/.venv/
 frontend/venv/

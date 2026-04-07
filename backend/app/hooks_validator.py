@@ -7,6 +7,30 @@ from pathlib import Path
 class HooksValidator:
     """Validates hooks used in generated code against known plugin hooks."""
 
+    # WordPress core hooks that are allowed in solutions
+    # These are standard WordPress/WooCommerce hooks used for integrations
+    WORDPRESS_CORE_HOOKS = {
+        "template_redirect",
+        "wp_loaded",
+        "init",
+        "wp_enqueue_scripts",
+        "wp_footer",
+        "wp_head",
+        "admin_init",
+        "admin_enqueue_scripts",
+        "woocommerce_init",
+        "woocommerce_cart_loaded_from_session",
+        "woocommerce_before_checkout_form",
+        "woocommerce_after_checkout_form",
+        "woocommerce_checkout_process",
+        "wp_safe_remote_get",
+        "wp_redirect",
+        "wc_get_product",
+        "WC_Cart",
+        "is_cart",
+        "is_checkout",
+    }
+
     def __init__(self, knowledge_base_dir: str = "knowledge_base"):
         self.kb_dir = Path(knowledge_base_dir)
         self.plugin_hooks: dict[str, Set[str]] = {}
@@ -41,7 +65,7 @@ class HooksValidator:
 
     def validate_hooks(self, plugin_id: str, code: str) -> tuple[bool, List[str]]:
         """
-        Validate that all hooks in generated code exist in the plugin.
+        Validate that all hooks in generated code exist in the plugin or are WordPress core hooks.
 
         Returns:
             (is_valid, invalid_hooks)
@@ -52,7 +76,10 @@ class HooksValidator:
 
         used_hooks = self.extract_hooks_from_code(code)
         available_hooks = self.plugin_hooks[plugin_id]
-        invalid_hooks = used_hooks - available_hooks
+
+        # Filter out WordPress core hooks - they're always valid
+        # Only keep hooks that are neither in plugin hooks nor in core WordPress hooks
+        invalid_hooks = used_hooks - available_hooks - self.WORDPRESS_CORE_HOOKS
 
         return len(invalid_hooks) == 0, list(invalid_hooks)
 
