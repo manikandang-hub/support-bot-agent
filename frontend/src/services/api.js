@@ -26,22 +26,4 @@ export const sendQuery = (pluginId, query, email, conversationId = null) => {
   return api.post('/chat', payload);
 };
 
-export const prepareTicket = (conversationId, pluginId, email) => {
-  return api.post('/prepare-ticket', {
-    conversation_id: conversationId,
-    plugin_id: pluginId,
-    email,
-  });
-};
-
-export const confirmTicket = (conversationId, pluginId, email, title, description) => {
-  return api.post('/confirm-ticket', {
-    conversation_id: conversationId,
-    plugin_id: pluginId,
-    email,
-    title,
-    description,
-  });
-};
-
 export default api;

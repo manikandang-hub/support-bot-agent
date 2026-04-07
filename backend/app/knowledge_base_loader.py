@@ -77,8 +77,19 @@ class KnowledgeBaseLoader:
         """
         results = self.search(plugin_name, query, n_results=max_results)
 
+        print(f"   📚 Knowledge Base Search Results:")
+        print(f"      Query: '{query[:50]}...'")
+        print(f"      Results found: {len(results)}/{max_results}")
+
         if not results:
+            print(f"      No relevant documents found")
             return ""
+
+        print(f"      Documents used for context:")
+        for i, doc in enumerate(results, 1):
+            topic = doc.get("topic", "Unknown")
+            hook_name = doc.get("hook_name", "N/A")
+            print(f"        {i}. Topic: {topic}, Hook: {hook_name}")
 
         context = "\n\nRELEVANT KNOWLEDGE BASE:\n"
         for i, doc in enumerate(results, 1):

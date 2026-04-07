@@ -36,7 +36,7 @@ class EscalationResponse(BaseModel):
 
 
 class ChatResponse(BaseModel):
-    action: Literal["snippet", "escalate", "ask_permission"]
+    action: Literal["snippet", "escalate"]
     explanation: str
     code: Optional[str] = None
     hook_names: Optional[List[str]] = None
@@ -45,25 +45,6 @@ class ChatResponse(BaseModel):
     reason: Optional[str] = None
     conversation_id: str  # Track conversation for follow-ups
     conversation_history: Optional[List[ConversationMessage]] = None  # Previous messages for context
-
-
-class PrepareTicketRequest(BaseModel):
-    conversation_id: str
-    plugin_id: str
-    email: str
-
-
-class PrepareTicketResponse(BaseModel):
-    title: str
-    description: str
-
-
-class ConfirmTicketRequest(BaseModel):
-    conversation_id: str
-    plugin_id: str
-    email: str
-    title: Optional[str] = None
-    description: Optional[str] = None
 
 
 class Hook(BaseModel):

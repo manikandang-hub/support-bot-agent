@@ -1,0 +1,22 @@
+{
+  "description": "Project-local Claude Code settings. Auto-synced from global ~/.claude/ by wt-init-plugin-sync.sh",
+  "phpcs": {
+    "standard": "WordPress",
+    "detected_by": "Plugin header inspection (Woo: header presence)",
+    "scope": "changed-lines-only",
+    "reference": "/Users/manikandang/.claude/agents/qa-runner.md (Phase 1 — PHPCS)"
+  },
+  "hooks": {
+    "reference": "/Users/manikandang/.claude/settings.json",
+    "inherited": [
+      "SessionStart — loads project context",
+      "PostToolUse — auto-review on Edit/Write",
+      "PreToolUse — pre-commit review on git commit",
+      "Stop — auto-test before exit"
+    ]
+  },
+  "permissions": {
+    "reference": "/Users/manikandang/.claude/settings.json",
+    "local_additions": []
+  }
+}
