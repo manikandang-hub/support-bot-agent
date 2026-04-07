@@ -623,20 +623,6 @@
       "file": "class-wt-catalog-fbproducts.php"
     },
     {
-      "name": "wt_feed_facebook_catalog_product_checkout_link",
-      "type": "filter",
-      "params": [
-        "wt_feed_facebook_catalog_product_checkout_link",
-        "filter",
-        "filter",
-        "hook",
-        "customize",
-        "extend"
-      ],
-      "description": "",
-      "file": "class-wt-catalog-fbproducts.php"
-    },
-    {
       "name": "wt_fb_sync_product_retailer_id",
       "type": "filter",
       "params": [
@@ -6201,8 +6187,338 @@
       ],
       "description": "Modify entire row of Bing Shopping feed after all field processing.",
       "file": "admin/modules/bing/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_twitter",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Twitter/X feed after all field processing. Allows conditional logic for stock status, pricing, and availability dates.",
+      "file": "admin/modules/twitter/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_buyon_google",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Buyon Google feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/buyon_google/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_criteo",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Criteo feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/criteo/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_custom",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Custom feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/custom/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_fruugo",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Fruugo feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/fruugo/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_google_local_inventory_ads",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Google Local Inventory Ads feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/google_local_inventory_ads/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_google_local_product_inventory",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Google Local Product Inventory feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/google_local_product_inventory/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_google_manufacturer",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Google Manufacturer feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/google_manufacturer/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_google_product_reviews",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Google Product Reviews feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/google_product_reviews/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_google_promotions",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Google Promotions feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/google_promotions/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_heureka",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Heureka feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/heureka/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_idealo",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Idealo feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/idealo/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_leguide",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Leguide feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/leguide/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_onbuy",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Onbuy feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/onbuy/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_pinterest_rss",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Pinterest Rss feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/pinterest_rss/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_pricerunner",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Pricerunner feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/pricerunner/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_pricespy",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Pricespy feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/pricespy/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_rakuten",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Rakuten feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/rakuten/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_shopmania",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Shopmania feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/shopmania/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_shopzilla",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Shopzilla feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/shopzilla/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_skroutz",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Skroutz feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/skroutz/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_snapchat",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Snapchat feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/snapchat/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_tiktokshop",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Tiktokshop feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/tiktokshop/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_vivino",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Vivino feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/vivino/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_yandex",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Yandex feed after all field processing. Allows conditional logic based on product properties.",
+      "file": "admin/modules/yandex/export/export.php"
+    },
+    {
+      "name": "wt_feed_facebook_product_checkout_link",
+      "type": "filter",
+      "params": [
+        "checkout_link",
+        "product"
+      ],
+      "description": "Customize product checkout link for Facebook feed exports",
+      "file": "admin/modules/facebook/export/export.php"
+    },
+    {
+      "name": "wt_feed_google_product_checkout_link",
+      "type": "filter",
+      "params": [
+        "checkout_link",
+        "product"
+      ],
+      "description": "Customize product checkout link for Google feed exports",
+      "file": "admin/modules/google/export/export.php"
+    },
+    {
+      "name": "wt_feed_twitter_product_checkout_link",
+      "type": "filter",
+      "params": [
+        "checkout_link",
+        "product"
+      ],
+      "description": "Customize product checkout link for Twitter feed exports",
+      "file": "admin/modules/twitter/export/export.php"
+    },
+    {
+      "name": "wt_feed_pinterest_product_checkout_link",
+      "type": "filter",
+      "params": [
+        "checkout_link",
+        "product"
+      ],
+      "description": "Customize product checkout link for Pinterest feed exports",
+      "file": "admin/modules/pinterest/export/export.php"
+    },
+    {
+      "name": "wt_feed_snapchat_product_checkout_link",
+      "type": "filter",
+      "params": [
+        "checkout_link",
+        "product"
+      ],
+      "description": "Customize product checkout link for Snapchat feed exports",
+      "file": "admin/modules/snapchat/export/export.php"
+    },
+    {
+      "name": "wt_feed_tiktok_product_checkout_link",
+      "type": "filter",
+      "params": [
+        "checkout_link",
+        "product"
+      ],
+      "description": "Customize product checkout link for Tiktok feed exports",
+      "file": "admin/modules/tiktok/export/export.php"
+    },
+    {
+      "name": "wt_feed_bing_product_checkout_link",
+      "type": "filter",
+      "params": [
+        "checkout_link",
+        "product"
+      ],
+      "description": "Customize product checkout link for Bing feed exports",
+      "file": "admin/modules/bing/export/export.php"
+    },
+    {
+      "name": "wt_feed_instagram_product_checkout_link",
+      "type": "filter",
+      "params": [
+        "checkout_link",
+        "product"
+      ],
+      "description": "Customize product checkout link for Instagram feed exports",
+      "file": "admin/modules/instagram/export/export.php"
     }
   ],
-  "total": 439,
+  "total": 471,
   "source": "Extracted from plugin PHP files"
 }
