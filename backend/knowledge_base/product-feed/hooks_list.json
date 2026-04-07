@@ -1,0 +1,6208 @@
+{
+  "hooks": [
+    {
+      "name": "wt_pf_",
+      "type": "filter",
+      "params": [
+        "wt_pf_",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-webtoffee-product-feed-sync.php"
+    },
+    {
+      "name": "wt_pf_remote_adapters_basic",
+      "type": "filter",
+      "params": [
+        "wt_pf_remote_adapters_basic",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$action",
+        "$adapter"
+      ],
+      "description": "",
+      "file": "class-webtoffee-product-feed-sync.php"
+    },
+    {
+      "name": "wt_pf_website_timezone",
+      "type": "filter",
+      "params": [
+        "wt_pf_website_timezone",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-webtoffee-product-feed-sync-admin.php"
+    },
+    {
+      "name": "wt_pf_catalog_product_description_type",
+      "type": "filter",
+      "params": [
+        "wt_pf_catalog_product_description_type",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-webtoffee-product-feed-sync-admin.php"
+    },
+    {
+      "name": "wt_pf_sync_include_variations_type",
+      "type": "filter",
+      "params": [
+        "wt_pf_sync_include_variations_type",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-webtoffee-product-feed-sync-admin.php"
+    },
+    {
+      "name": "wt_facebook_connection_parameters",
+      "type": "filter",
+      "params": [
+        "wt_facebook_connection_parameters",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-webtoffee-product-feed-sync-admin.php"
+    },
+    {
+      "name": "wt_fbfeed_upload_limit",
+      "type": "filter",
+      "params": [
+        "wt_fbfeed_upload_limit",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-webtoffee-product-feed-sync-admin.php"
+    },
+    {
+      "name": "wt_facebook_connection_scopes",
+      "type": "filter",
+      "params": [
+        "wt_facebook_connection_scopes",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-webtoffee-product-feed-sync-admin.php"
+    },
+    {
+      "name": "wt_facebook_external_business_id",
+      "type": "filter",
+      "params": [
+        "wt_facebook_external_business_id",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-webtoffee-product-feed-sync-admin.php"
+    },
+    {
+      "name": "wt_facebook_connection_business_name",
+      "type": "filter",
+      "params": [
+        "wt_facebook_connection_business_name",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-webtoffee-product-feed-sync-admin.php"
+    },
+    {
+      "name": "wt_pf_facebook_catalog_sync_args",
+      "type": "filter",
+      "params": [
+        "wt_pf_facebook_catalog_sync_args",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-webtoffee-product-feed-sync-admin.php"
+    },
+    {
+      "name": "wt_facebook_sync_products",
+      "type": "filter",
+      "params": [
+        "wt_facebook_sync_products",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-webtoffee-product-feed-sync-admin.php"
+    },
+    {
+      "name": "wt_fbfeed_log_list_limit",
+      "type": "filter",
+      "params": [
+        "wt_fbfeed_log_list_limit",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-webtoffee-product-feed-sync-admin.php"
+    },
+    {
+      "name": "wt_import_export_allowed_capability",
+      "type": "filter",
+      "params": [
+        "wt_import_export_allowed_capability",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-webtoffee-product-feed-sync-admin.php"
+    },
+    {
+      "name": "wt_pf_admin_menu_pro",
+      "type": "filter",
+      "params": [
+        "wt_pf_admin_menu_pro",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-webtoffee-product-feed-sync-admin.php"
+    },
+    {
+      "name": "wt_pf_after_advanced_setting_update_pro",
+      "type": "action",
+      "params": [
+        "wt_pf_after_advanced_setting_update_pro",
+        "action",
+        "action",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-webtoffee-product-feed-sync-admin.php"
+    },
+    {
+      "name": "wt_pf_after_custom_fields_setting_update_pro",
+      "type": "action",
+      "params": [
+        "wt_pf_after_custom_fields_setting_update_pro",
+        "action",
+        "action",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-webtoffee-product-feed-sync-admin.php"
+    },
+    {
+      "name": "wc_aelia_cs_convert",
+      "type": "filter",
+      "params": [
+        "wc_aelia_cs_convert",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-webtoffee-product-feed-sync-admin.php"
+    },
+    {
+      "name": "wt_feed_product_attributes_dropdown_fields",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_attributes_dropdown_fields",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-common-helper.php"
+    },
+    {
+      "name": "wt_pf_allow_meta_in_mapping",
+      "type": "filter",
+      "params": [
+        "wt_pf_allow_meta_in_mapping",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-common-helper.php"
+    },
+    {
+      "name": "wt_pf_allow_global_attr_in_mapping",
+      "type": "filter",
+      "params": [
+        "wt_pf_allow_global_attr_in_mapping",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-common-helper.php"
+    },
+    {
+      "name": "wt_pf_allow_local_attr_in_mapping",
+      "type": "filter",
+      "params": [
+        "wt_pf_allow_local_attr_in_mapping",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-common-helper.php"
+    },
+    {
+      "name": "wt_feed_product_attributes_dropdown",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_attributes_dropdown",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-common-helper.php"
+    },
+    {
+      "name": "wt_feed_dropdown_exclude_meta_keys",
+      "type": "filter",
+      "params": [
+        "wt_feed_dropdown_exclude_meta_keys",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$exclude",
+        "$default_exclude_keys"
+      ],
+      "description": "",
+      "file": "class-wt-common-helper.php"
+    },
+    {
+      "name": "wt_feed_dropdown_exclude_meta_keys_pattern",
+      "type": "filter",
+      "params": [
+        "wt_feed_dropdown_exclude_meta_keys_pattern",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$exclude",
+        "$default_exclude_key_patterns"
+      ],
+      "description": "",
+      "file": "class-wt-common-helper.php"
+    },
+    {
+      "name": "wt_feed_product_additional_fields",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_additional_fields",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-common-helper.php"
+    },
+    {
+      "name": "wt_feed_product_global_attributes_fields",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_global_attributes_fields",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-common-helper.php"
+    },
+    {
+      "name": "wt_feed_product_local_attributes_fields",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_local_attributes_fields",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-common-helper.php"
+    },
+    {
+      "name": "wt_feed_product_gender_options",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_gender_options",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-common-helper.php"
+    },
+    {
+      "name": "wt_feed_product_agegroup",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_agegroup",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-common-helper.php"
+    },
+    {
+      "name": "wt_feed_facebook_product_conditions",
+      "type": "filter",
+      "params": [
+        "wt_feed_facebook_product_conditions",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-common-helper.php"
+    },
+    {
+      "name": "wt_pf_advanced_setting_fields_pro",
+      "type": "filter",
+      "params": [
+        "wt_pf_advanced_setting_fields_pro",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-common-helper.php"
+    },
+    {
+      "name": "wt_pf_allowed_screens_pro",
+      "type": "filter",
+      "params": [
+        "wt_pf_allowed_screens_pro",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-common-helper.php"
+    },
+    {
+      "name": "wt_feed_shipping_attribute_price",
+      "type": "filter",
+      "params": [
+        "wt_feed_shipping_attribute_price",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-feed-shipping.php"
+    },
+    {
+      "name": "wt_feed_shipping_country_check",
+      "type": "filter",
+      "params": [
+        "wt_feed_shipping_country_check",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-feed-shipping.php"
+    },
+    {
+      "name": "wt_feed_filter_shipping_price",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_shipping_price",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-feed-shipping.php"
+    },
+    {
+      "name": "wt_feed_filter_shipping_attribute_price",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_shipping_attribute_price",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-feed-shipping.php"
+    },
+    {
+      "name": "wt_feed_processed_shipping_info",
+      "type": "filter",
+      "params": [
+        "wt_feed_processed_shipping_info",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-feed-shipping.php"
+    },
+    {
+      "name": "wt_product_feed_product_is_purchasable",
+      "type": "filter",
+      "params": [
+        "wt_product_feed_product_is_purchasable",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-feed-shipping.php"
+    },
+    {
+      "name": "wt_feed_filter_chosen_method_id",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_chosen_method_id",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-feed-shipping.php"
+    },
+    {
+      "name": "wt_pf_allow_html_form_data",
+      "type": "filter",
+      "params": [
+        "wt_pf_allow_html_form_data",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-pf-catalog-export-helper.php"
+    },
+    {
+      "name": "wt_pf_debug_panel_buttons_basic",
+      "type": "filter",
+      "params": [
+        "wt_pf_debug_panel_buttons_basic",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-pf-catalog-export-helper.php"
+    },
+    {
+      "name": "wt_facebook_product_description_mode",
+      "type": "filter",
+      "params": [
+        "wt_facebook_product_description_mode",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-catalog-fbproducts.php"
+    },
+    {
+      "name": "wt_fbfeed_prepare_product_data",
+      "type": "filter",
+      "params": [
+        "wt_fbfeed_prepare_product_data",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-catalog-fbproducts.php"
+    },
+    {
+      "name": "wt_feed_facebook_catalog_product_checkout_link",
+      "type": "filter",
+      "params": [
+        "wt_feed_facebook_catalog_product_checkout_link",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-catalog-fbproducts.php"
+    },
+    {
+      "name": "wt_fb_sync_product_retailer_id",
+      "type": "filter",
+      "params": [
+        "wt_fb_sync_product_retailer_id",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-catalog-fbproducts.php"
+    },
+    {
+      "name": "wt_fbfeed_item_update_request",
+      "type": "filter",
+      "params": [
+        "wt_fbfeed_item_update_request",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-catalog-fbproducts.php"
+    },
+    {
+      "name": "wt_facebook_sync_additional_variant_attributes",
+      "type": "filter",
+      "params": [
+        "wt_facebook_sync_additional_variant_attributes",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-catalog-fbproducts.php"
+    },
+    {
+      "name": "wt_fb_categories",
+      "type": "filter",
+      "params": [
+        "wt_fb_categories",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-wt-catalog-manager-settings.php"
+    },
+    {
+      "name": "wt_feed_xml_writer_items_node",
+      "type": "filter",
+      "params": [
+        "wt_feed_xml_writer_items_node",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-xmlwriter.php"
+    },
+    {
+      "name": "wt_feed_xml_head_description",
+      "type": "filter",
+      "params": [
+        "wt_feed_xml_head_description",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-xmlwriter.php"
+    },
+    {
+      "name": "wt_feed_alter_export_xml_tags",
+      "type": "filter",
+      "params": [
+        "wt_feed_alter_export_xml_tags",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-xmlwriter.php"
+    },
+    {
+      "name": "wt_iew_xml_node_wrap_cdata",
+      "type": "filter",
+      "params": [
+        "wt_iew_xml_node_wrap_cdata",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-xmlwriter.php"
+    },
+    {
+      "name": "wt_ier_include_bom_in_csv",
+      "type": "filter",
+      "params": [
+        "wt_ier_include_bom_in_csv",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-csvwriter.php"
+    },
+    {
+      "name": "wt_pf_exporter_keep_encoding",
+      "type": "filter",
+      "params": [
+        "wt_pf_exporter_keep_encoding",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-csvwriter.php"
+    },
+    {
+      "name": "wt_escape_operators_list",
+      "type": "filter",
+      "params": [
+        "wt_escape_operators_list",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-excelwriter.php"
+    },
+    {
+      "name": "wt_iew_importer_keep_encoding",
+      "type": "filter",
+      "params": [
+        "wt_iew_importer_keep_encoding",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-excelwriter.php"
+    },
+    {
+      "name": "wt_cli_license_section",
+      "type": "action",
+      "params": [
+        "wt_cli_license_section",
+        "action",
+        "action",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "admin-settings-licence.php"
+    },
+    {
+      "name": "wt_pf_plugin_settings_pro_form",
+      "type": "action",
+      "params": [
+        "wt_pf_plugin_settings_pro_form",
+        "action",
+        "action",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "webtoffee-product-feed-admin-display.php"
+    },
+    {
+      "name": "wt_pf_plugin_out_settings_pro_form",
+      "type": "action",
+      "params": [
+        "wt_pf_plugin_out_settings_pro_form",
+        "action",
+        "action",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "webtoffee-product-feed-admin-display.php"
+    },
+    {
+      "name": "wt_pf_allowed_product_statuses",
+      "type": "filter",
+      "params": [
+        "wt_pf_allowed_product_statuses",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "pinterest_rss.php"
+    },
+    {
+      "name": "wt_feed_pinterest_product_conditions",
+      "type": "filter",
+      "params": [
+        "wt_feed_pinterest_product_conditions",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "pinterest_rss.php"
+    },
+    {
+      "name": "wt_feed_pinterest_product_agegroup",
+      "type": "filter",
+      "params": [
+        "wt_feed_pinterest_product_agegroup",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "pinterest_rss.php"
+    },
+    {
+      "name": "wt_feed_google_product_conditions",
+      "type": "filter",
+      "params": [
+        "wt_feed_google_product_conditions",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "shopzilla.php"
+    },
+    {
+      "name": "wt_feed_google_product_agegroup",
+      "type": "filter",
+      "params": [
+        "wt_feed_google_product_agegroup",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "shopzilla.php"
+    },
+    {
+      "name": "wt_feed_twitter_product_conditions",
+      "type": "filter",
+      "params": [
+        "wt_feed_twitter_product_conditions",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "twitter.php"
+    },
+    {
+      "name": "wt_feed_twitter_product_agegroup",
+      "type": "filter",
+      "params": [
+        "wt_feed_twitter_product_agegroup",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "twitter.php"
+    },
+    {
+      "name": "wt_pf_add_licence_manager",
+      "type": "filter",
+      "params": [
+        "wt_pf_add_licence_manager",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "licence_manager.php"
+    },
+    {
+      "name": "wt_feed_fruugo_product_conditions",
+      "type": "filter",
+      "params": [
+        "wt_feed_fruugo_product_conditions",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "fruugo.php"
+    },
+    {
+      "name": "wt_feed_fruugo_product_agegroup",
+      "type": "filter",
+      "params": [
+        "wt_feed_fruugo_product_agegroup",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "fruugo.php"
+    },
+    {
+      "name": "wt_feed_facebook_product_agegroup",
+      "type": "filter",
+      "params": [
+        "wt_feed_facebook_product_agegroup",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "skroutz.php"
+    },
+    {
+      "name": "wt_feed_tiktok_product_conditions",
+      "type": "filter",
+      "params": [
+        "wt_feed_tiktok_product_conditions",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "tiktokshop.php"
+    },
+    {
+      "name": "wt_feed_tiktok_product_agegroup",
+      "type": "filter",
+      "params": [
+        "wt_feed_tiktok_product_agegroup",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "tiktokshop.php"
+    },
+    {
+      "name": "wt_pf_importer_post_types_basic",
+      "type": "filter",
+      "params": [
+        "wt_pf_importer_post_types_basic",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "history.php"
+    },
+    {
+      "name": "wt_pf_exporter_post_types_basic",
+      "type": "filter",
+      "params": [
+        "wt_pf_exporter_post_types_basic",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "history.php"
+    },
+    {
+      "name": "wt_feed_vivino_product_conditions",
+      "type": "filter",
+      "params": [
+        "wt_feed_vivino_product_conditions",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "vivino.php"
+    },
+    {
+      "name": "wt_feed_vivino_product_agegroup",
+      "type": "filter",
+      "params": [
+        "wt_feed_vivino_product_agegroup",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "vivino.php"
+    },
+    {
+      "name": "wt_feed_onbuy_product_conditions",
+      "type": "filter",
+      "params": [
+        "wt_feed_onbuy_product_conditions",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "onbuy.php"
+    },
+    {
+      "name": "wt_feed_onbuy_product_agegroup",
+      "type": "filter",
+      "params": [
+        "wt_feed_onbuy_product_agegroup",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "onbuy.php"
+    },
+    {
+      "name": "wt_pf_exporter_alter_filter_fields_basic",
+      "type": "filter",
+      "params": [
+        "wt_pf_exporter_alter_filter_fields_basic",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_exporter_remote_adapter_names_basic",
+      "type": "filter",
+      "params": [
+        "wt_pf_exporter_remote_adapter_names_basic",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_exporter_alter_advanced_fields_basic",
+      "type": "filter",
+      "params": [
+        "wt_pf_exporter_alter_advanced_fields_basic",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_exporter_steps_basic",
+      "type": "filter",
+      "params": [
+        "wt_pf_exporter_steps_basic",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_export_full_form_data_basic",
+      "type": "filter",
+      "params": [
+        "wt_pf_export_full_form_data_basic",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_exporter_do_export_basic",
+      "type": "filter",
+      "params": [
+        "wt_pf_exporter_do_export_basic",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_alter_export_data_basic",
+      "type": "filter",
+      "params": [
+        "wt_pf_alter_export_data_basic",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_export_dir_path",
+      "type": "filter",
+      "params": [
+        "wt_pf_export_dir_path",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_export_process_finished",
+      "type": "action",
+      "params": [
+        "wt_pf_export_process_finished",
+        "action",
+        "action",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_exporter_alter_default_batch_count_basic",
+      "type": "filter",
+      "params": [
+        "wt_pf_exporter_alter_default_batch_count_basic",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_additional_product_fields",
+      "type": "filter",
+      "params": [
+        "wt_feed_additional_product_fields",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_additional_data_fields",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_additional_data_fields",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_additional_variation_product_fields",
+      "type": "filter",
+      "params": [
+        "wt_feed_additional_variation_product_fields",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_type_separator",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_type_separator",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "wt-product.php"
+    },
+    {
+      "name": "trp_translate_url",
+      "type": "filter",
+      "params": [
+        "trp_translate_url",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "wt-product.php"
+    },
+    {
+      "name": "advanced_woo_discount_rules_get_product_discount_price_from_custom_price",
+      "type": "filter",
+      "params": [
+        "advanced_woo_discount_rules_get_product_discount_price_from_custom_price",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "wt-product.php"
+    },
+    {
+      "name": "wt_pf_enable_yith_price_override",
+      "type": "filter",
+      "params": [
+        "wt_pf_enable_yith_price_override",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "wt-product.php"
+    },
+    {
+      "name": "wpml_object_id",
+      "type": "filter",
+      "params": [
+        "wpml_object_id",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "wt-product.php"
+    },
+    {
+      "name": "wt_wc_format_decimal_needed",
+      "type": "filter",
+      "params": [
+        "wt_wc_format_decimal_needed",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "wt-product.php"
+    },
+    {
+      "name": "wt_feed_filter_product_price",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_price",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "wt-product.php"
+    },
+    {
+      "name": "wt_feed_filter_product_sale_price",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_sale_price",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "wt-product.php"
+    },
+    {
+      "name": "wt_pf_advanced_feed_filter_gate",
+      "type": "filter",
+      "params": [
+        "wt_pf_advanced_feed_filter_gate",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$product",
+        "$advanced_filter_options"
+      ],
+      "description": "",
+      "file": "wt-product.php"
+    },
+    {
+      "name": "wt_product_feed_currency_fields",
+      "type": "filter",
+      "params": [
+        "wt_product_feed_currency_fields",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "wt-product.php"
+    },
+    {
+      "name": "wt_feed_advanced_filter_product_brand",
+      "type": "filter",
+      "params": [
+        "wt_feed_advanced_filter_product_brand",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "wt-product.php"
+    },
+    {
+      "name": "wt_productfeed_run_facebook_cron",
+      "type": "filter",
+      "params": [
+        "wt_productfeed_run_facebook_cron",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "cron.php"
+    },
+    {
+      "name": "wt_pf_allow_parallel_fb_cron",
+      "type": "filter",
+      "params": [
+        "wt_pf_allow_parallel_fb_cron",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "cron.php"
+    },
+    {
+      "name": "wt_pf_scheduled_sync_action_finished",
+      "type": "action",
+      "params": [
+        "wt_pf_scheduled_sync_action_finished",
+        "action",
+        "action",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "cron.php"
+    },
+    {
+      "name": "wt_productfeed_cron_interval_details",
+      "type": "filter",
+      "params": [
+        "wt_productfeed_cron_interval_details",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "cron.php"
+    },
+    {
+      "name": "wt_productfeed_fbcron_interval_details",
+      "type": "filter",
+      "params": [
+        "wt_productfeed_fbcron_interval_details",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "cron.php"
+    },
+    {
+      "name": "wt_productfeed_run_cron",
+      "type": "filter",
+      "params": [
+        "wt_productfeed_run_cron",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "cron.php"
+    },
+    {
+      "name": "wt_pf_allow_parallel_cron",
+      "type": "filter",
+      "params": [
+        "wt_pf_allow_parallel_cron",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "cron.php"
+    },
+    {
+      "name": "wt_pf_scheduled_action_finished",
+      "type": "action",
+      "params": [
+        "wt_pf_scheduled_action_finished",
+        "action",
+        "action",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "cron.php"
+    },
+    {
+      "name": "wt_pf_alter_product_feed_csv_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_alter_product_feed_csv_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_product_feed_limit_per_request",
+      "type": "filter",
+      "params": [
+        "wt_product_feed_limit_per_request",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_catalog_args",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_catalog_args",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_id",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_id",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_get_product_title_with_variation_attribute",
+      "type": "filter",
+      "params": [
+        "wt_feed_get_product_title_with_variation_attribute",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_title",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_title",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_parent_title",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_parent_title",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_description_with_html",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_description_with_html",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_primary_category",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_primary_category",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_primary_category_id",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_primary_category_id",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_child_category",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_child_category",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_processed_shipping_infos",
+      "type": "filter",
+      "params": [
+        "wt_feed_processed_shipping_infos",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_child_category_id",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_child_category_id",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_local_category",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_local_category",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_pinterest_rss_product_link",
+      "type": "filter",
+      "params": [
+        "wt_feed_pinterest_rss_product_link",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_parent_link",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_parent_link",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_canonical_link",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_canonical_link",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_ex_link",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_ex_link",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_image",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_image",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_feature_image",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_feature_image",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_category_separator",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_category_separator",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_images",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_images",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_number_of_ratings",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_number_of_ratings",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_average_review_rating",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_average_review_rating",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_number_of_reviews",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_number_of_reviews",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_condition",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_condition",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_pinterest_product_age_group",
+      "type": "filter",
+      "params": [
+        "wt_feed_pinterest_product_age_group",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_pinterest_material",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_pinterest_material",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_pinterest_pattern",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_pinterest_pattern",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_pinterest_unit_pricing_measure",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_pinterest_unit_pricing_measure",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_pinterest_unit_pricing_base_measure",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_pinterest_unit_pricing_base_measure",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_pinterest_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_pinterest_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_pinterest_min_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_pinterest_min_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_pinterest_max_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_pinterest_max_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_brand",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_brand",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_gtin",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_gtin",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_mpn",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_mpn",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_identifier_exists",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_identifier_exists",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_type",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_type",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_is_bundle",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_is_bundle",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_is_multipack",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_is_multipack",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_visibility",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_visibility",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_rating_total",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_rating_total",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_rating_average",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_rating_average",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_tags_separator",
+      "type": "filter",
+      "params": [
+        "wt_feed_tags_separator",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$separator",
+        "$config",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_tags",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_tags",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$separator",
+        "$config",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_item_group_id",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_item_group_id",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_sku",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_sku",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_sku_id",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_sku_id",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_availability",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_availability",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_availability_date",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_availability_date",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_add_to_cart_link",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_add_to_cart_link",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_quantity",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_quantity",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_currency",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_currency",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_sale_price_sdate",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_sale_price_sdate",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_sale_price_edate",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_sale_price_edate",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_first_variation_price",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_first_variation_price",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_current_price",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_current_price",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_price_with_tax",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_price_with_tax",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_current_price_with_tax",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_current_price_with_tax",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_sale_price_with_tax",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_sale_price_with_tax",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_weight",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_weight",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_weight_unit",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_weight_unit",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_width",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_width",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_height",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_height",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_length",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_length",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_pinterest_product_shipping_xml",
+      "type": "filter",
+      "params": [
+        "wt_feed_pinterest_product_shipping_xml",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_pinterest_product_shipping",
+      "type": "filter",
+      "params": [
+        "wt_feed_pinterest_product_shipping",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_shipping_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_shipping_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_pinterest_custom_label_0",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_pinterest_custom_label_0",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_pinterest_custom_label_1",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_pinterest_custom_label_1",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_pinterest_custom_label_2",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_pinterest_custom_label_2",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_pinterest_custom_label_3",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_pinterest_custom_label_3",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_pinterest_custom_label_4",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_pinterest_custom_label_4",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_date_created",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_date_created",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_date_updated",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_date_updated",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_tax_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_tax_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_tax_status",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_tax_status",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_pinterest_rss_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_pinterest_rss_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_feed_google_product_age_group",
+      "type": "filter",
+      "params": [
+        "wt_feed_google_product_age_group",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_google_material",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_google_material",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_google_pattern",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_google_pattern",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_google_unit_pricing_measure",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_google_unit_pricing_measure",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_google_unit_pricing_base_measure",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_google_unit_pricing_base_measure",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_google_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_google_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_google_min_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_google_min_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_google_max_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_google_max_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_google_product_shipping_xml",
+      "type": "filter",
+      "params": [
+        "wt_feed_google_product_shipping_xml",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_google_product_shipping",
+      "type": "filter",
+      "params": [
+        "wt_feed_google_product_shipping",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_google_custom_label_0",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_google_custom_label_0",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_google_custom_label_1",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_google_custom_label_1",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_google_custom_label_2",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_google_custom_label_2",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_google_custom_label_3",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_google_custom_label_3",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_google_custom_label_4",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_google_custom_label_4",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_shopzilla_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_shopzilla_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_product_feed_keep_default_as_variation",
+      "type": "filter",
+      "params": [
+        "wt_product_feed_keep_default_as_variation",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_default_variation",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_default_variation",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_google_shipping_details",
+      "type": "filter",
+      "params": [
+        "wt_feed_google_shipping_details",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_twitter_product_get_inventory",
+      "type": "filter",
+      "params": [
+        "wt_feed_twitter_product_get_inventory",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_twitter_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_twitter_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_feed_filter_product_link",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_link",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_han",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_han",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_ean",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_ean",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_delivery_cost_gls",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_delivery_cost_gls",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_idealo_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_idealo_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_feed_heureka_product_title",
+      "type": "filter",
+      "params": [
+        "wt_feed_heureka_product_title",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_heureka_product_alternate_image",
+      "type": "filter",
+      "params": [
+        "wt_feed_heureka_product_alternate_image",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$catalog_attr",
+        "$product_attr",
+        "$export_columns"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_heureka_product_ean",
+      "type": "filter",
+      "params": [
+        "wt_feed_heureka_product_ean",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_heureka_variant_attributes",
+      "type": "filter",
+      "params": [
+        "wt_feed_heureka_variant_attributes",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_heureka_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_heureka_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_feed_filter_product_price_without_vat",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_price_without_vat",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_vat_rate",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_vat_rate",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_identification_type",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_identification_type",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_language",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_language",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_isbn",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_isbn",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_description",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_description",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_short_description",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_short_description",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_tiktok_category",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_tiktok_category",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_fruugo_categories",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_fruugo_categories",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_variant_image",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_variant_image",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_variant_attr",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_variant_attr",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_attr_color",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_attr_color",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_attr_size",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_attr_size",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_tiktok_product_age_group",
+      "type": "filter",
+      "params": [
+        "wt_feed_tiktok_product_age_group",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_tiktok_material",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_tiktok_material",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_tiktok_pattern",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_tiktok_pattern",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_tiktok_unit_pricing_measure",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_tiktok_unit_pricing_measure",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_tiktok_unit_pricing_base_measure",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_tiktok_unit_pricing_base_measure",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_tiktok_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_tiktok_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_tiktok_min_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_tiktok_min_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_tiktok_max_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_tiktok_max_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_identifier_code",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_identifier_code",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_tiktok_product_shipping_xml",
+      "type": "filter",
+      "params": [
+        "wt_feed_tiktok_product_shipping_xml",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_tiktok_product_shipping",
+      "type": "filter",
+      "params": [
+        "wt_feed_tiktok_product_shipping",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_tiktok_custom_label_0",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_tiktok_custom_label_0",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_tiktok_custom_label_1",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_tiktok_custom_label_1",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_tiktok_custom_label_2",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_tiktok_custom_label_2",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_tiktok_custom_label_3",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_tiktok_custom_label_3",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_tiktok_custom_label_4",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_tiktok_custom_label_4",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_fruugo_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_fruugo_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_feed_filter_product_product_line",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_product_line",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_product_name",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_product_name",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_page_link",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_page_link",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_video_link",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_video_link",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_google_manufacturer_product_details",
+      "type": "filter",
+      "params": [
+        "wt_feed_google_manufacturer_product_details",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_google_manufacturer_product_highlight",
+      "type": "filter",
+      "params": [
+        "wt_feed_google_manufacturer_product_highlight",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_google_manufacturer_product_feature_description",
+      "type": "filter",
+      "params": [
+        "wt_feed_google_manufacturer_product_feature_description",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_google_manufacturer_product_canonical_link",
+      "type": "filter",
+      "params": [
+        "wt_feed_google_manufacturer_product_canonical_link",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_disclosure_date",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_disclosure_date",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_release_date",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_release_date",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_googlemfc_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_googlemfc_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_pf_pinterest_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_pinterest_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "hf_alter_product_export_csv_columns",
+      "type": "filter",
+      "params": [
+        "hf_alter_product_export_csv_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_facebook_product_age_group",
+      "type": "filter",
+      "params": [
+        "wt_feed_facebook_product_age_group",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_facebook_material",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_facebook_material",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_facebook_pattern",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_facebook_pattern",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_fb_category",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_fb_category",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_facebook_product_shipping_xml",
+      "type": "filter",
+      "params": [
+        "wt_feed_facebook_product_shipping_xml",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_facebook_product_shipping",
+      "type": "filter",
+      "params": [
+        "wt_feed_facebook_product_shipping",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_facebook_custom_label_0",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_facebook_custom_label_0",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_facebook_custom_label_1",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_facebook_custom_label_1",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_facebook_custom_label_2",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_facebook_custom_label_2",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_facebook_custom_label_3",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_facebook_custom_label_3",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_facebook_custom_label_4",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_facebook_custom_label_4",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_skroutz_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_skroutz_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_feed_filter_product_store_code",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_store_code",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_link_store_code",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_link_store_code",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_mlink_store_code",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_mlink_store_code",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_packing_method",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_packing_method",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_packing_sla",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_packing_sla",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_google_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_google_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_google_min_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_google_min_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_google_max_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_google_max_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_glpi_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_glpi_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_feed_filter_product_promotion_id",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_promotion_id",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_shipping_weight",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_shipping_weight",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_shipping_height",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_shipping_height",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_shipping_width",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_shipping_width",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_google_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_google_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_feed_bing_product_shipping_xml",
+      "type": "filter",
+      "params": [
+        "wt_feed_bing_product_shipping_xml",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_bing_product_shipping",
+      "type": "filter",
+      "params": [
+        "wt_feed_bing_product_shipping",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_bing_product_shipping_cp",
+      "type": "filter",
+      "params": [
+        "wt_feed_bing_product_shipping_cp",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_bing_product_shipping_csp",
+      "type": "filter",
+      "params": [
+        "wt_feed_bing_product_shipping_csp",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_bing_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_bing_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_pf_pricerunner_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_pricerunner_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_pf_leguide_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_leguide_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_pf_tiktokshop_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_tiktokshop_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_feed_shopmania_product_link",
+      "type": "filter",
+      "params": [
+        "wt_feed_shopmania_product_link",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_shopmania_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_shopmania_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_feed_filter_fb_product_quantity",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_fb_product_quantity",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_fb_override",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_fb_override",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_facebook_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_facebook_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_pf_pricespy_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_pricespy_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_feed_yandex_product_title",
+      "type": "filter",
+      "params": [
+        "wt_feed_yandex_product_title",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_yandex_product_currency_id",
+      "type": "filter",
+      "params": [
+        "wt_feed_yandex_product_currency_id",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_yandex_product_primary_category_id",
+      "type": "filter",
+      "params": [
+        "wt_feed_yandex_product_primary_category_id",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_yandex_product_dimension",
+      "type": "filter",
+      "params": [
+        "wt_feed_yandex_product_dimension",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_yandex_product_params",
+      "type": "filter",
+      "params": [
+        "wt_feed_yandex_product_params",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_yandex_product_alternate_image",
+      "type": "filter",
+      "params": [
+        "wt_feed_yandex_product_alternate_image",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$catalog_attr",
+        "$product_attr",
+        "$export_columns"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_yandex_product_ean",
+      "type": "filter",
+      "params": [
+        "wt_feed_yandex_product_ean",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_yandex_variant_attributes",
+      "type": "filter",
+      "params": [
+        "wt_feed_yandex_variant_attributes",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_yandex_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_yandex_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_feed_vivino_product_age_group",
+      "type": "filter",
+      "params": [
+        "wt_feed_vivino_product_age_group",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_vivino_material",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_vivino_material",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_vivino_pattern",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_vivino_pattern",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_vivino_unit_pricing_measure",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_vivino_unit_pricing_measure",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_vivino_unit_pricing_base_measure",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_vivino_unit_pricing_base_measure",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_vivino_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_vivino_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_vivino_min_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_vivino_min_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_vivino_max_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_vivino_max_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_vivino_product_shipping_xml",
+      "type": "filter",
+      "params": [
+        "wt_feed_vivino_product_shipping_xml",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_vivino_product_shipping",
+      "type": "filter",
+      "params": [
+        "wt_feed_vivino_product_shipping",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_vivino_custom_label_0",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_vivino_custom_label_0",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_vivino_custom_label_1",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_vivino_custom_label_1",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_vivino_custom_label_2",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_vivino_custom_label_2",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_vivino_custom_label_3",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_vivino_custom_label_3",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_vivino_custom_label_4",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_vivino_custom_label_4",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_vivino_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_vivino_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_feed_product_criteo_material",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_criteo_material",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_criteo_pattern",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_criteo_pattern",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_criteo_unit_pricing_measure",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_criteo_unit_pricing_measure",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_criteo_unit_pricing_base_measure",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_criteo_unit_pricing_base_measure",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_criteo_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_criteo_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_criteo_min_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_criteo_min_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_criteo_max_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_criteo_max_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_criteo_custom_label_0",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_criteo_custom_label_0",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_criteo_custom_label_1",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_criteo_custom_label_1",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_criteo_custom_label_2",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_criteo_custom_label_2",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_criteo_custom_label_3",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_criteo_custom_label_3",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_criteo_custom_label_4",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_criteo_custom_label_4",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_rakuten_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_rakuten_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_feed_onbuy_product_title",
+      "type": "filter",
+      "params": [
+        "wt_feed_onbuy_product_title",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_onbuy_product_age_group",
+      "type": "filter",
+      "params": [
+        "wt_feed_onbuy_product_age_group",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_onbuy_material",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_onbuy_material",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_onbuy_pattern",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_onbuy_pattern",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_onbuy_unit_pricing_measure",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_onbuy_unit_pricing_measure",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_onbuy_unit_pricing_base_measure",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_onbuy_unit_pricing_base_measure",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_onbuy_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_onbuy_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_onbuy_min_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_onbuy_min_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_onbuy_max_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_onbuy_max_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_onbuy_shipping_details",
+      "type": "filter",
+      "params": [
+        "wt_feed_onbuy_shipping_details",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_onbuy_product_shipping_xml",
+      "type": "filter",
+      "params": [
+        "wt_feed_onbuy_product_shipping_xml",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_onbuy_product_shipping",
+      "type": "filter",
+      "params": [
+        "wt_feed_onbuy_product_shipping",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_onbuy_custom_label_0",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_onbuy_custom_label_0",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_onbuy_custom_label_1",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_onbuy_custom_label_1",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_onbuy_custom_label_2",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_onbuy_custom_label_2",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_onbuy_custom_label_3",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_onbuy_custom_label_3",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_onbuy_custom_label_4",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_onbuy_custom_label_4",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_onbuy_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_onbuy_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_pf_exporter_alter_meta_mapping_fields_basic",
+      "type": "filter",
+      "params": [
+        "wt_pf_exporter_alter_meta_mapping_fields_basic",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-export-ajax.php"
+    },
+    {
+      "name": "wt_pf_feed_category_mapping",
+      "type": "filter",
+      "params": [
+        "wt_pf_feed_category_mapping",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-export-ajax.php"
+    },
+    {
+      "name": "wt_pf_exporter_alter_mapping_fields_basic",
+      "type": "filter",
+      "params": [
+        "wt_pf_exporter_alter_mapping_fields_basic",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-export-ajax.php"
+    },
+    {
+      "name": "wt_pf_exporter_alter_mapping_enabled_fields_basic",
+      "type": "filter",
+      "params": [
+        "wt_pf_exporter_alter_mapping_enabled_fields_basic",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-export-ajax.php"
+    },
+    {
+      "name": "wt_pf_exporter_alter_footer_btns_basic",
+      "type": "filter",
+      "params": [
+        "wt_pf_exporter_alter_footer_btns_basic",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "class-export-ajax.php"
+    },
+    {
+      "name": "wt_pf_exporter_before_head",
+      "type": "action",
+      "params": [
+        "wt_pf_exporter_before_head",
+        "action",
+        "action",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "main.php"
+    },
+    {
+      "name": "wt_pf_exporter_validate",
+      "type": "action",
+      "params": [
+        "wt_pf_exporter_validate",
+        "action",
+        "action",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "main.php"
+    },
+    {
+      "name": "wt_pf_exporter_file_into_fields_row_id_basic",
+      "type": "filter",
+      "params": [
+        "wt_pf_exporter_file_into_fields_row_id_basic",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "_export_advanced_page.php"
+    },
+    {
+      "name": "wt_pf_exporter_file_into_js_fn",
+      "type": "action",
+      "params": [
+        "wt_pf_exporter_file_into_js_fn",
+        "action",
+        "action",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "_export_advanced_page.php"
+    },
+    {
+      "name": "wt_pf_toggle_schedule_btn",
+      "type": "action",
+      "params": [
+        "wt_pf_toggle_schedule_btn",
+        "action",
+        "action",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "_export_advanced_page.php"
+    },
+    {
+      "name": "wt_pf_custom_action_basic",
+      "type": "action",
+      "params": [
+        "wt_pf_custom_action_basic",
+        "action",
+        "action",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "_export_advanced_page.php"
+    },
+    {
+      "name": "wpml_setting",
+      "type": "filter",
+      "params": [
+        "wpml_setting",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "_export_post_type_page.php"
+    },
+    {
+      "name": "wpml_active_languages",
+      "type": "filter",
+      "params": [
+        "wpml_active_languages",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "_export_post_type_page.php"
+    },
+    {
+      "name": "wt_pf_catalog_regenerate_interval",
+      "type": "filter",
+      "params": [
+        "wt_pf_catalog_regenerate_interval",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "_export_post_type_page.php"
+    },
+    {
+      "name": "wt_pf_catalog_cron_type",
+      "type": "filter",
+      "params": [
+        "wt_pf_catalog_cron_type",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "_export_post_type_page.php"
+    },
+    {
+      "name": "wt_pf_catalog_include_variations_type",
+      "type": "filter",
+      "params": [
+        "wt_pf_catalog_include_variations_type",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "_export_post_type_page.php"
+    },
+    {
+      "name": "wt_pf_tiktok_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_tiktok_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_feed_filter_product_total_sold",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_total_sold",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$total_sold",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_shipping_cost",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_shipping_cost",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$shipping_cost",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_variation_type",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_variation_type",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$type",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_merchant_name",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_merchant_name",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$merchant_name",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_merchant_id",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_merchant_id",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$merchant_id",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_stock_status",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_stock_status",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$stock_status",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_leadtime",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_leadtime",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$lead_time",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_adult",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_adult",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$adult",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_size_system",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_size_system",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$size_system",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_review_id",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_review_id",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$review_id",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_reviewer_name",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_reviewer_name",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$reviewer_name",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_reviewer_id",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_reviewer_id",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$reviewer_id",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_review_timestamp",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_review_timestamp",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$timestamp",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_review_title",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_review_title",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$review_title",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_review_content",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_review_content",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$content",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_review_url",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_review_url",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$review_url",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_review_ratings",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_review_ratings",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$ratings",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_review_is_spam",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_review_is_spam",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$is_spam",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_review_collection_method",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_review_collection_method",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$collection_method",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_sell_on_google_quantity",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_sell_on_google_quantity",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$quantity",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_min_handling_time",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_min_handling_time",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$min_handling_time",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_max_handling_time",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_max_handling_time",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$max_handling_time",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_return_address_label",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_return_address_label",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$return_address_label",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_return_policy_label",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_return_policy_label",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$return_policy_label",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_google_funded_promotion_eligibility",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_google_funded_promotion_eligibility",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$eligibility",
+        "$product"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_custom_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_custom_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_feed_product_review_args",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_review_args",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_review_id",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_review_id",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$catalog_attr",
+        "$review_attr",
+        "$export_columns"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_reviewer_name",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_reviewer_name",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend",
+        "$catalog_attr",
+        "$review_attr",
+        "$export_columns"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_reviewer_name_id",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_reviewer_name_id",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_reviewer_id",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_reviewer_id",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_review_timestamp",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_review_timestamp",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_review_title",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_review_title",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_review_content",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_review_content",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_review_url",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_review_url",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_review_rating",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_review_rating",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_review_is_spam",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_review_is_spam",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_review_skus",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_review_skus",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_review_gtins",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_review_gtins",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_review_mpns",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_review_mpns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_brands",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_brands",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_product_details",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_product_details",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_filter_product_url",
+      "type": "filter",
+      "params": [
+        "wt_feed_filter_product_url",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_gpr_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_gpr_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_feed_product_rakuten_material",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_rakuten_material",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_rakuten_pattern",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_rakuten_pattern",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_rakuten_unit_pricing_measure",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_rakuten_unit_pricing_measure",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_rakuten_unit_pricing_base_measure",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_rakuten_unit_pricing_base_measure",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_rakuten_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_rakuten_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_rakuten_min_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_rakuten_min_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_rakuten_max_energy_efficiency_class",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_rakuten_max_energy_efficiency_class",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_rakuten_custom_label_0",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_rakuten_custom_label_0",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_rakuten_custom_label_1",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_rakuten_custom_label_1",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_rakuten_custom_label_2",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_rakuten_custom_label_2",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_rakuten_custom_label_3",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_rakuten_custom_label_3",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_feed_product_rakuten_custom_label_4",
+      "type": "filter",
+      "params": [
+        "wt_feed_product_rakuten_custom_label_4",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "export.php"
+    },
+    {
+      "name": "wt_pf_snapchat_product_post_columns",
+      "type": "filter",
+      "params": [
+        "wt_pf_snapchat_product_post_columns",
+        "filter",
+        "filter",
+        "hook",
+        "customize",
+        "extend"
+      ],
+      "description": "",
+      "file": "data-product-post-columns.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_google",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Google Shopping feed after all field processing. Allows conditional logic across multiple fields based on product properties.",
+      "file": "admin/modules/google/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_facebook",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Facebook/Instagram feed after all field processing.",
+      "file": "admin/modules/facebook/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_pinterest",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Pinterest feed after all field processing.",
+      "file": "admin/modules/pinterest/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_tiktok",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of TikTok Ads feed after all field processing.",
+      "file": "admin/modules/tiktok/export/export.php"
+    },
+    {
+      "name": "wt_batch_product_export_row_data_bing",
+      "type": "filter",
+      "params": [
+        "row",
+        "product"
+      ],
+      "description": "Modify entire row of Bing Shopping feed after all field processing.",
+      "file": "admin/modules/bing/export/export.php"
+    }
+  ],
+  "total": 439,
+  "source": "Extracted from plugin PHP files"
+}

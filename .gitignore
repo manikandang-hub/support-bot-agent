@@ -1,0 +1,103 @@
+backend/venv/lib/python3.12/site-packages/fastapi/middleware/__pycache__/trustedhost.cpython-312.pyc
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+backend.log
+
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build artifacts
+dist/
+build/
+*.pyc
+
+# Database
+*.db
+*.sqlite
+
+# Local SSH keys (do not commit)
+support-bot-key
+support-bot-key.pub
+
+backend/.venv/
+backend/venv/
+backend/env/
+backend/ENV/
+backend/.virtualenv/
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.ruff_cache/
+backend/.pytype/
+backend/.hypothesis/
+backend/.tox/
+backend/.nox/
+
+frontend/.venv/
+frontend/venv/
+frontend/env/
+frontend/ENV/
+frontend/.virtualenv/
+frontend/.pytest_cache/
+frontend/.mypy_cache/
+frontend/.ruff_cache/
+frontend/.pytype/
+frontend/.hypothesis/
+frontend/.tox/
+frontend/.nox/
+# node modules
+frontend/node_modules/
+frontend/package-lock.json
+frontend/yarn.lock
+frontend/pnpm-lock.yaml
+frontend/bun.lockb
+frontend/bun.lock
+frontend/bun.lock.json
+frontend/bun.lock.yaml
+frontend/bun.lock.json

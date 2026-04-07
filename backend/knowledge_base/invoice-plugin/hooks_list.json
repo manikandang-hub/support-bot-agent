@@ -1,0 +1,60 @@
+{
+  "hooks": [
+    {
+      "name": "wt_invoice_before_generate",
+      "type": "action",
+      "params": ["order_id"],
+      "description": "Runs before invoice generation",
+      "file": "class-invoice-generator.php",
+      "example": "add_action('wt_invoice_before_generate', 'my_callback');"
+    },
+    {
+      "name": "wt_invoice_after_generate",
+      "type": "action",
+      "params": ["order_id", "invoice_id"],
+      "description": "Runs after invoice is generated",
+      "file": "class-invoice-generator.php",
+      "example": "add_action('wt_invoice_after_generate', 'my_callback', 10, 2);"
+    },
+    {
+      "name": "wt_invoice_content",
+      "type": "filter",
+      "params": ["content", "invoice_data"],
+      "description": "Modify invoice HTML content",
+      "file": "class-invoice-template.php",
+      "example": "add_filter('wt_invoice_content', 'my_callback', 10, 2);"
+    },
+    {
+      "name": "wt_invoice_line_items",
+      "type": "filter",
+      "params": ["items", "order"],
+      "description": "Filter invoice line items",
+      "file": "class-invoice-items.php",
+      "example": "add_filter('wt_invoice_line_items', 'my_callback', 10, 2);"
+    },
+    {
+      "name": "wt_invoice_totals",
+      "type": "filter",
+      "params": ["totals", "invoice"],
+      "description": "Modify invoice totals (subtotal, tax, shipping, total)",
+      "file": "class-invoice-totals.php",
+      "example": "add_filter('wt_invoice_totals', 'my_callback', 10, 2);"
+    },
+    {
+      "name": "wt_packing_slip_content",
+      "type": "filter",
+      "params": ["content", "order"],
+      "description": "Modify packing slip content",
+      "file": "class-packing-slip.php",
+      "example": "add_filter('wt_packing_slip_content', 'my_callback', 10, 2);"
+    },
+    {
+      "name": "wt_credit_note_items",
+      "type": "filter",
+      "params": ["items", "refund"],
+      "description": "Filter credit note line items",
+      "file": "class-credit-note.php",
+      "example": "add_filter('wt_credit_note_items', 'my_callback', 10, 2);"
+    }
+  ]
+}
