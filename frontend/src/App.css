@@ -1,27 +1,99 @@
-/* ── Layout ─────────────────────────────────────────── */
-.app {
-  width: 100%;
-  height: 100vh;
+/* ── Widget launcher ────────────────────────────────── */
+.widget-trigger {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  box-shadow: 0 4px 20px rgba(79, 70, 229, 0.45), 0 2px 8px rgba(0,0,0,0.15);
   display: flex;
-  align-items: stretch;
-  background: #f0f2f5;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  z-index: 9999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.widget-trigger:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 28px rgba(79, 70, 229, 0.55), 0 3px 10px rgba(0,0,0,0.18);
+}
+
+.widget-trigger:focus-visible {
+  outline: 3px solid #7c3aed;
+  outline-offset: 3px;
+}
+
+.widget-trigger--open {
+  background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+.widget-trigger-logo,
+.widget-trigger-close {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  color: white;
+}
+
+.widget-trigger-logo--hidden {
+  opacity: 0;
+  transform: scale(0.7) rotate(45deg);
+  pointer-events: none;
+}
+
+.widget-trigger-logo:not(.widget-trigger-logo--hidden),
+.widget-trigger-close:not(.widget-trigger-logo--hidden) {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+/* ── Widget panel ───────────────────────────────────── */
+.widget-panel {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  width: 400px;
+  height: 620px;
+  max-height: calc(100vh - 120px);
+  max-width: calc(100vw - 32px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.18), 0 4px 20px rgba(0,0,0,0.1);
+  z-index: 9998;
+  /* Hidden state */
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform-origin: bottom right;
+}
+
+.widget-panel--open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: all;
+}
+
+/* ── Chat shell (inside widget) ─────────────────────── */
+.chat-shell {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  overflow: hidden;
 }
 
 .loading-screen,
 .error-screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  gap: 12px;
-  font-size: 15px;
-  color: #666;
-}
-
-.error-screen {
-  color: #dc2626;
+  display: none;
 }
 
 /* ── Chat shell ─────────────────────────────────────── */
@@ -106,6 +178,30 @@
 .topbar-select:focus {
   border-color: rgba(255,255,255,0.6);
   box-shadow: 0 0 0 3px rgba(255,255,255,0.15);
+}
+
+.topbar-close-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.25);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.topbar-close-btn:hover {
+  background: rgba(255,255,255,0.28);
+}
+
+.topbar-close-btn:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
 }
 
 /* ── Email bar ──────────────────────────────────────── */

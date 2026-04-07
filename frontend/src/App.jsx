@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getPlugins } from './services/api';
-import ChatInterface from './components/ChatInterface';
+import ChatWidget from './components/ChatWidget';
 import './App.css';
 
 export default function App() {
@@ -24,25 +24,17 @@ export default function App() {
         setLoading(false);
       }
     };
-
     fetchPlugins();
   }, []);
 
-  if (loading) {
-    return <div className="loading-screen" role="status" aria-live="polite">Loading SupportBot…</div>;
-  }
-
-  if (error) {
-    return <div className="error-screen" role="alert">{error}</div>;
-  }
+  if (loading) return null;
+  if (error) return null;
 
   return (
-    <div className="app">
-      <ChatInterface
-        plugins={plugins}
-        selectedPlugin={selectedPlugin}
-        onPluginChange={setSelectedPlugin}
-      />
-    </div>
+    <ChatWidget
+      plugins={plugins}
+      selectedPlugin={selectedPlugin}
+      onPluginChange={setSelectedPlugin}
+    />
   );
 }
